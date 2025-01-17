@@ -1,0 +1,18 @@
+/* variables */
+/* fonts */
+/* colors */
+/* mixins */
+/* media */
+@media screen and (max-width: 1920px) {
+  :root {
+    font-size: 0.520833vw;
+  }
+}
+.skip {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+}

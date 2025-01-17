@@ -1,0 +1,11 @@
+@import 'config';
+
+//숨김 텍스트
+.skip {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    margin: -1px;
+}

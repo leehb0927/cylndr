@@ -1,0 +1,80 @@
+
+/* variables */
+
+/* fonts */
+$font-light: 'Selecta-Light';
+$font-regular: 'Selecta-Regular';
+$font-medium: 'Selecta-Medium';
+
+/* colors */
+//기본 컬러
+$color-white: #fff;
+$color-white-01: rgba($color-white, .1);
+
+$color-gray: #555;
+
+$color-black: #000;
+$color-black-01: rgba($color-black, .1);
+
+/* mixins */
+//vs
+@mixin vs {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    top: 0;
+    left: 0;
+}
+
+@mixin vs-b {
+    display: block;
+    content: '';
+}
+
+@mixin vs-ib {
+    display: inline-block;
+    content: '';
+}
+
+//background
+@mixin background-cover {
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    }
+}
+
+@mixin background-contain {
+    background: {
+        size: contain;
+        repeat: no-repeat;
+        position: center;
+    }
+}
+
+//flex
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* media */
+
+@media screen and (max-width: 1920px) {
+    :root {
+        font-size: .520833vw;
+    }
+}

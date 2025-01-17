@@ -1,0 +1,10 @@
+/* variables */
+/* fonts */
+/* colors */
+/* mixins */
+/* media */
+@media screen and (max-width: 1920px) {
+  :root {
+    font-size: 0.520833vw;
+  }
+}
