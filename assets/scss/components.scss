@@ -4,17 +4,23 @@
 /* header */
 .header {
     position: relative;
+    background-color: $color-black;
     .bg-video {
         width: 100%;
+        padding-top: 22rem;
         video {
             display: block;
             object-fit: cover;
-            max-width: 100%;
             width: 100%;
             max-width: 188.2rem;
+            margin: 0 auto;
         }
     }
     .header-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         position: absolute;
         top: 0;
         left: 0;
@@ -25,10 +31,36 @@
             .deco-text {
                 padding-top: 3.6rem;
                 .text-list {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 4rem;
                     span {
                         font-family: $font-light;
                         font-size: 1.6rem;
                         color: $color-gray;
+                    }
+                }
+            }
+            .logo-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2.5rem;
+                h1 {
+                    width: 100%;
+                    max-width: 118rem;
+                    margin-bottom: 3rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .position {
+                    display: flex;
+                    p, span {
+                        font-size: 3.6rem;
+                        &.city {
+                            margin-left: 6.5rem;
+                        }
                     }
                 }
             }
