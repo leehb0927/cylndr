@@ -71,3 +71,19 @@
 .header .header-inner .header-top .logo-wrap .position p.city, .header .header-inner .header-top .logo-wrap .position span.city {
   margin-left: 6.5rem;
 }
+.header .header-inner .header-top .logo-wrap .position span {
+  display: inline-block;
+  width: 4.705rem;
+  text-align: right;
+}
+.header .header-inner .header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  margin-bottom: 3rem;
+}
+.header .header-inner .header-bottom p {
+  font-size: 3.6rem;
+  letter-spacing: -0.03em;
+}
