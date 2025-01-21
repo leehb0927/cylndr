@@ -40,6 +40,7 @@ time, mark, audio, video {
 	font-family: 'Selecta-Regular';
 	font-size: 10px;
 	vertical-align: baseline;
+	color: #fff;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -63,4 +64,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+a {
+	text-decoration: none;
 }

@@ -1,1 +1,7 @@
 @import 'config';
+
+section {
+    &.about-us {
+        background-color: $color-black;
+    }
+}

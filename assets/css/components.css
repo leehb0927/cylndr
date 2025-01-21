@@ -87,3 +87,31 @@
   font-size: 3.6rem;
   letter-spacing: -0.03em;
 }
+.header nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.header nav .nav-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav .nav-wrapper .top {
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 2rem 4rem;
+  background-color: #0f0;
+  border-radius: 99%;
+}
+.header nav .nav-wrapper ul {
+  margin: 2rem 4rem;
+}
+.header nav .nav-wrapper ul li a {
+  font-family: "Selecta-Light";
+  font-size: 2rem;
+  letter-spacing: -0.02rem;
+  line-height: 2.4rem;
+}
