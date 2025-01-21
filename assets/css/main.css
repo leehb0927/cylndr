@@ -9,5 +9,36 @@
   }
 }
 section.about-us {
-  background-color: #000;
+  position: relative;
+  margin-top: -16rem;
+}
+section.about-us .intro {
+  margin-bottom: 51rem;
+}
+section.about-us .intro .show-text-wrap .line:first-of-type {
+  margin-left: 23rem;
+}
+section.about-us .portfolio {
+  overflow: hidden;
+  margin-bottom: 48rem;
+}
+section.about-us .portfolio .portfolio-inner .cards {
+  display: flex;
+}
+section.about-us .portfolio .portfolio-inner .cards li {
+  padding-right: 30rem;
+}
+section.about-us .portfolio .portfolio-inner .cards li .img {
+  width: 56rem;
+  height: auto;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+section.about-us .portfolio .portfolio-inner .cards li .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.about-us .work-intro .show-text-wrap {
+  padding-left: 49.27%;
 }

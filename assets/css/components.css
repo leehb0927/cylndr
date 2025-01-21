@@ -89,7 +89,7 @@
 }
 .header nav {
   position: absolute;
-  bottom: 0;
+  bottom: 61rem;
   width: 100%;
 }
 .header nav .nav-wrapper {
@@ -114,4 +114,25 @@
   font-size: 2rem;
   letter-spacing: -0.02rem;
   line-height: 2.4rem;
+}
+
+.show-text-wrap {
+  padding-left: 17.7%;
+}
+.show-text-wrap .line .units {
+  display: inline-block;
+  font-family: "Selecta-Medium";
+  font-size: 5.6rem;
+  line-height: 6.2rem;
+  letter-spacing: -0.01em;
+}
+
+.text-ko-wrap {
+  padding-left: 42.39%;
+  margin-top: 7rem;
+}
+.text-ko-wrap p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.03em;
 }
