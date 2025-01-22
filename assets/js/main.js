@@ -23,11 +23,32 @@ gsap.ticker.add((time)=>{
 gsap.ticker.lagSmoothing(0)
 
 /* header pin 고정 */
-let navPin = ScrollTrigger.create({
+/* let navPin = ScrollTrigger.create({
     trigger: '.header nav',
     pin: '.header nav',
     markers: true
-})
+}) */
+
+let navPin = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.header nav',
+        pin: '.nav-wrapper',
+        start: '0% 0%',
+        end: '90% 0%',
+        markers: true,
+        //gsap onUpdate찾아보기
+        onUpdate: (self) => {
+            if (self.progress >= 1) {
+                // 스크롤의 끝에 도달했을 때 opacity를 0으로 설정
+                gsap.to('.nav-wrapper ul', { opacity: 0, y: 100, duration: 0.5 })
+            } else {
+                // 스크롤 중간에서는 opacity를 유지
+                gsap.to('.nav-wrapper ul', { opacity: 1, y: 0, duration: 0.5 });
+            }
+        }
+    }
+});
+
 
 /* header 시계 */
 const currentTime = document.querySelector('.header-inner .header-bottom .time');
