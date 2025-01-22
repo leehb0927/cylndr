@@ -78,6 +78,9 @@
             p {
                 font-size: 3.6rem;
                 letter-spacing: -.03em;
+                &.time {
+                    font-variant-numeric: tabular-nums;
+                }
             }
         }
     }

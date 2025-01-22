@@ -8,37 +8,223 @@
     font-size: 0.520833vw;
   }
 }
+.wrapper {
+  overflow: hidden;
+}
+
 section.about-us {
   position: relative;
   margin-top: -16rem;
 }
-section.about-us .intro {
+section.about-us .area1 {
   margin-bottom: 51rem;
 }
-section.about-us .intro .show-text-wrap .line:first-of-type {
+section.about-us .area1 .show-text-wrap .line:first-of-type {
   margin-left: 23rem;
 }
-section.about-us .portfolio {
-  overflow: hidden;
+section.about-us .area2 {
   margin-bottom: 48rem;
 }
-section.about-us .portfolio .portfolio-inner .cards {
+section.about-us .area2 .portfolio-inner .cards {
   display: flex;
 }
-section.about-us .portfolio .portfolio-inner .cards li {
+section.about-us .area2 .portfolio-inner .cards li {
   padding-right: 30rem;
 }
-section.about-us .portfolio .portfolio-inner .cards li .img {
+section.about-us .area2 .portfolio-inner .cards li .img {
   width: 56rem;
   height: auto;
   border-radius: 3rem;
   overflow: hidden;
 }
-section.about-us .portfolio .portfolio-inner .cards li .img img {
+section.about-us .area2 .portfolio-inner .cards li .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-section.about-us .work-intro .show-text-wrap {
+section.about-us .area3 {
+  margin-bottom: 12rem;
+}
+section.about-us .area3 .show-text-wrap {
   padding-left: 49.27%;
+}
+section.about-us .area3 .text-ko-wrap {
+  padding-left: 49.27%;
+}
+section.about-us .area4 {
+  position: relative;
+  padding: 25rem 0 30rem;
+  margin-bottom: 60rem;
+}
+section.about-us .area4 .wrap {
+  position: relative;
+  width: 100%;
+}
+section.about-us .area4 .worlds p {
+  position: relative;
+  font-family: "RhymesDisplay-Thin";
+  font-size: 23rem;
+  line-height: 22rem;
+  letter-spacing: -0.03em;
+  left: 50%;
+}
+section.about-us .area4 .worlds p.london {
+  margin-left: -70rem;
+}
+section.about-us .area4 .worlds p.los-an {
+  margin-left: -34rem;
+}
+section.about-us .area4 .worlds p.santiago {
+  margin-left: -97rem;
+}
+section.about-us .area4 .worlds p.new-york {
+  margin-left: -25rem;
+}
+section.about-us .area4 .worlds p.dallas {
+  margin-left: -7rem;
+}
+section.about-us .area4 .worlds p.bucharest {
+  margin-left: -98rem;
+}
+section.about-us .area4 .worlds p.durham {
+  margin-left: -5rem;
+}
+section.about-us .area4 .clocks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+section.about-us .area4 .clocks .clock-wrap {
+  position: relative;
+  width: 25.4rem;
+  height: 25.4rem;
+  margin: 0 auto;
+}
+section.about-us .area4 .clocks .clock-wrap svg {
+  width: 100%;
+  height: auto;
+}
+section.about-us .area4 .clocks .clock-wrap.clock1 {
+  top: -26rem;
+  left: -45.5rem;
+}
+section.about-us .area4 .clocks .clock-wrap.clock2 {
+  top: -15rem;
+  right: -46.4rem;
+}
+section.about-us .area4 .clocks .clock-wrap.clock3 {
+  top: -14rem;
+  left: -67.5rem;
+}
+section.about-us .area4 .clocks .clock-wrap.clock4 {
+  top: -11rem;
+  right: -57rem;
+}
+section.about-us .area4 .clocks .clock-wrap.clock5 {
+  top: 16rem;
+  right: -37.6rem;
+}
+section.about-us .area4 .clocks .clock-wrap.clock6 {
+  top: -16rem;
+  left: -52rem;
+}
+section.about-us .area4 .clocks .clock-wrap.clock7 {
+  top: 8rem;
+  left: -10.6rem;
+}
+section.about-us .area4 .deco-text {
+  position: absolute;
+  top: 40rem;
+  left: 4rem;
+}
+section.about-us .area4 .deco-text p {
+  font-family: "Selecta-Light";
+  font-size: 1.6rem;
+  color: #555;
+}
+section.about-us .area5 .wrap {
+  position: relative;
+  width: 100%;
+}
+section.about-us .area5 .bg-image {
+  width: 82.6rem;
+  margin: 0 auto;
+  border-radius: 3rem;
+  overflow: hidden;
+  opacity: 0.1;
+}
+section.about-us .area5 .bg-image .img {
+  width: 100%;
+}
+section.about-us .area5 .bg-image .img img {
+  width: 100%;
+}
+section.about-us .area5 .box-text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 4rem;
+  text-align: center;
+}
+section.about-us .area5 .box-text .name {
+  margin-bottom: 43.5rem;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+section.about-us .area5 .box-text h2 {
+  margin-bottom: 2rem;
+  font-family: "RhymesDisplay-Thin";
+  font-size: 18rem;
+  line-height: 16rem;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+section.about-us .area5 .box-text h2 span {
+  display: block;
+  margin-bottom: 2rem;
+  font-family: "Selecta-Regular";
+  font-size: 18rem;
+  line-height: 16rem;
+  letter-spacing: -0.01em;
+}
+section.about-us .area5 .box-text .sub-text1, section.about-us .area5 .box-text .sub-text2 {
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+section.about-us .area5 .box-text .sub-text1 {
+  margin-bottom: 57.5rem;
+}
+section.about-us .area5 .box-text .date {
+  font-family: "RhymesDisplay-Thin";
+  font-weight: 300;
+  font-size: 18rem;
+  line-height: 16rem;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+section.about-us .area5 .box-text .time {
+  margin-bottom: 2rem;
+}
+section.about-us .area5 .box-text .time span {
+  font-size: 18rem;
+  line-height: 16rem;
+  letter-spacing: -0.02em;
+}
+section.about-us .area5 .box-text .time .time-num {
+  display: inline-block;
+  width: 20.6rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+section.about-us .area5 .clock-wrap {
+  position: absolute;
+  top: 18rem;
+  left: 50%;
+  width: 190rem;
+  margin-left: -95rem;
+}
+section.about-us .area5 .clock-wrap svg {
+  width: 100%;
+  height: auto;
 }

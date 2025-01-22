@@ -87,6 +87,9 @@
   font-size: 3.6rem;
   letter-spacing: -0.03em;
 }
+.header .header-inner .header-bottom p.time {
+  font-variant-numeric: tabular-nums;
+}
 .header nav {
   position: absolute;
   bottom: 61rem;
