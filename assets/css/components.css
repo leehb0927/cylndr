@@ -95,6 +95,7 @@
   bottom: -75rem;
   width: 100%;
   height: 140vh;
+  z-index: 999;
 }
 .header nav .nav-wrapper {
   width: 100%;
@@ -123,20 +124,27 @@
 .show-text-wrap {
   padding-left: 17.7%;
 }
+.show-text-wrap .line {
+  overflow: hidden;
+}
 .show-text-wrap .line .units {
   display: inline-block;
   font-family: "Selecta-Medium";
   font-size: 5.6rem;
   line-height: 6.2rem;
   letter-spacing: -0.01em;
+  transform: translateY(100%);
 }
 
 .text-ko-wrap {
   padding-left: 42.39%;
   margin-top: 7rem;
+  overflow: hidden;
 }
 .text-ko-wrap p {
   font-size: 1.8rem;
   line-height: 2.8rem;
   letter-spacing: -0.03em;
+  transform: translateY(100%);
+  opacity: 0;
 }
