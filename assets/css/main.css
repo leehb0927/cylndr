@@ -25,11 +25,15 @@ section.about-us .area1 .show-text-wrap .line:first-of-type {
 section.about-us .area2 {
   margin-bottom: 48rem;
 }
+section.about-us .area2 .portfolio-inner .cards-wrap {
+  display: flex;
+}
 section.about-us .area2 .portfolio-inner .cards {
   display: flex;
 }
 section.about-us .area2 .portfolio-inner .cards li {
   padding-right: 30rem;
+  opacity: 0.2;
 }
 section.about-us .area2 .portfolio-inner .cards li .img {
   width: 56rem;

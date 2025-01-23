@@ -179,6 +179,9 @@ const showTextList2 = document.querySelectorAll('.main .about-us .area2 .line .u
 showTextAnimation(showTextList2, '.main .area2', '70% bottom');
 showSubTextAnimation('.main .about-us .area2 .text-ko-wrap p', '.main .area2');
 
+//카드 리스트 이미지가 스크롤에 맞춰 움직이고, 중앙에 온 카드 이미지 opacity 조절하기
+
+
 
 
 

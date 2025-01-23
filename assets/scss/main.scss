@@ -21,10 +21,14 @@ section {
         .area2 {
             margin-bottom: 48rem;
             .portfolio-inner {
+                .cards-wrap {
+                    display: flex;
+                }
                 .cards {
                     display: flex;
                     li {
                         padding-right: 30rem;
+                        opacity: .2;
                         .img {
                             width: 56rem;
                             height: auto;
