@@ -201,6 +201,10 @@ window.addEventListener('resize', cardSlideScrollTrigger);
 
 
 //카드리스트 이동 스크롤 트리거
+/* 
+utils() _ gsap에서 제공하는 여러 가지 유용한 함수들이 모여있는 객체
+toArray _ 선택된 dom요소들을 배열로 변환해주는 함수
+*/
 const area2List = gsap.utils.toArray('.main .about-us .area2 .cards li');
 const scrollTween = gsap.to(area2List, {
     xPercent: -100 * (area2List.length - 1),
@@ -247,3 +251,101 @@ showSubTextAnimation('.main .about-us .area3 .text-ko-wrap p', '.main .area3', {
     start : '150% bottom',
     end : '150% bottom',
 });
+
+
+
+
+
+/* .about-us .area4 */
+//시계 나라이름 스크롤트리거
+//시계 스크롤 트리거
+const area3Clocks = gsap.utils.toArray('.main .about-us .area4 .clocks .clock-wrap');
+const clocksScroll = gsap.to(area3Clocks, {
+    y: '-120%',
+    scrollTrigger: {
+        trigger: '.main .about-us .area4',
+        start: 'top bottom',
+        end: '128% bottom',
+        scrub: true,
+    }
+})
+
+//나라이름 스크롤 트리거
+/* const oddCity = gsap.utils.toArray('.main .about-us .area4 .worlds p:nth-child(odd)');
+const oddCityScroll = gsap.to(oddCity, {
+    x: 65,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.main .about-us .area4',
+        start: 'top bottom',
+        end: '140% bottom',
+        scrub: true,
+    }
+})
+
+const evenCity = gsap.utils.toArray('.main .about-us .area4 .worlds p:nth-child(even)');
+const evenCityScroll = gsap.to(evenCity, {
+    x: -75,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.main .about-us .area4',
+        start: 'top bottom',
+        end: '140% bottom',
+        scrub: true,
+    }
+}) */
+
+/* 
+나라이름 스크롤 트리거 코드 리팩토링
+-> 겹치는 코드가 많아 코드가 매우 길어짐
+*/
+
+/* 
+화살표 함수 사용
+const 함수 이름 = (매개변수1, 매개변수2) => {}
+원래 함수 형태
+const 함수 이름 = function(매개변수1, 매개변수2) {}
+*/
+const CityScrollAnimation = (cities, direction) => {
+    gsap.to(cities, {
+        x: direction === 'odd' ? 65 : -75,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.main .about-us .area4',
+            start: 'top bottom',
+            end: '140% bottom',
+            scrub: true,
+        }
+    })
+}
+/* 
+        삼항 연산자 direction이 'odd'가 참이면 65, 거짓이면 -75반환
+
+        if(direction === 'odd){
+            return 65;
+        }else {
+            return -75
+        }
+        if-else 구문과 같다.
+        */
+
+const oddCity = gsap.utils.toArray('.main .about-us .area4 .worlds p:nth-child(odd)');
+const evenCity = gsap.utils.toArray('.main .about-us .area4 .worlds p:nth-child(even)');
+CityScrollAnimation(oddCity, 'odd');
+CityScrollAnimation(evenCity, 'even');
+
+
+
+
+
+/* .about-us .area5 */
+gsap.to('.main .about-us .area5 .bg-image', {
+    opacity: 1,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.main .about-us .area5',
+        start: 'top bottom',
+        end: '70% bottom',
+        scrub: true
+    }
+})
