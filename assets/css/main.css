@@ -147,6 +147,9 @@ section.about-us .area4 .deco-text p {
   font-size: 1.6rem;
   color: #555;
 }
+section.about-us .area5 {
+  margin-bottom: 5rem;
+}
 section.about-us .area5 .wrap {
   position: relative;
   width: 100%;
@@ -231,4 +234,22 @@ section.about-us .area5 .clock-wrap {
 section.about-us .area5 .clock-wrap svg {
   width: 100%;
   height: auto;
+}
+section.about-us .area6 .wrap {
+  position: relative;
+}
+section.about-us .area6 .bg-wrap {
+  width: 82.7rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+section.about-us .area6 .bg-wrap .bg-img-list {
+  display: flex;
+}
+section.about-us .area6 .bg-wrap .bg-img-list .img {
+  flex-shrink: 0;
+  width: 100%;
+}
+section.about-us .area6 .bg-wrap .bg-img-list .img img {
+  width: 100%;
 }

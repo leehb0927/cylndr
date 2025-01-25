@@ -148,6 +148,7 @@ section {
             }
         }
         .area5 {
+            margin-bottom: 5rem;
             .wrap {
                 position: relative;
                 width: 100%;
@@ -231,6 +232,26 @@ section {
                 svg {
                     width: 100%;
                     height: auto;
+                }
+            }
+        }
+        .area6 {
+            .wrap {
+                position: relative;
+            }
+            .bg-wrap {
+                width: 82.7rem;
+                margin: 0 auto;
+                overflow: hidden;
+                .bg-img-list {
+                    display: flex;
+                    .img {
+                        flex-shrink: 0;
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
