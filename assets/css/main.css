@@ -33,13 +33,13 @@ section.about-us .area2 .portfolio-inner .cards {
 }
 section.about-us .area2 .portfolio-inner .cards li {
   padding-right: 30rem;
-  opacity: 0.2;
 }
 section.about-us .area2 .portfolio-inner .cards li .img {
   width: 56rem;
   height: auto;
   border-radius: 3rem;
   overflow: hidden;
+  opacity: 0.2;
 }
 section.about-us .area2 .portfolio-inner .cards li .img img {
   width: 100%;

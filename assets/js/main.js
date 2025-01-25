@@ -179,9 +179,63 @@ const showTextList2 = document.querySelectorAll('.main .about-us .area2 .line .u
 showTextAnimation(showTextList2, '.main .area2', '70% bottom');
 showSubTextAnimation('.main .about-us .area2 .text-ko-wrap p', '.main .area2');
 
-//카드 리스트 이미지가 스크롤에 맞춰 움직이고, 중앙에 온 카드 이미지 opacity 조절하기
+//카드 리스트가 스크롤에 맞춰 오른쪽에서 왼쪽으로 이동 & 센터에 위치한 카드는 opacity:1
+//(ul전체길이 + li/2) - window/2 = 이 값을 .cards-wrap 에 transform: translateX(이값)
+function cardSlideScrollTrigger() {
+    const area2CardsWrap = document.querySelector('.main .about-us .area2 .cards-wrap');
+    const area2Cards = area2CardsWrap.querySelector('.cards');
+    const area2Card = area2CardsWrap.querySelector('li');
+
+    const area2WrapWidth = area2Cards.offsetWidth;
+    const area2CardWidth = area2Card.offsetWidth / 2;
+    const windowHalf = window.innerWidth / 2;
+    const cardsTransform = area2WrapWidth + area2CardWidth - windowHalf;
+    const cardsGap ='15rem';
+
+    //cards-wrap 이동시킬 값
+    area2CardsWrap.style.transform = `translateX(calc(-${cardsTransform}px + ${cardsGap}))`
+}
+cardSlideScrollTrigger();
+
+window.addEventListener('resize', cardSlideScrollTrigger);
 
 
+//카드리스트 이동 스크롤 트리거
+const area2List = gsap.utils.toArray('.main .about-us .area2 .cards li');
+const scrollTween = gsap.to(area2List, {
+    xPercent: -100 * (area2List.length - 1),
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.main .about-us .area2 .portfolio-inner',
+        scrub: 1,
+        start: '-80% top',
+        end: '300%',
+        //뷰포트 높이의 300%
+    }
+})
+gsap.utils.toArray('.main .about-us .area2 li .img').forEach(function(list) {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: list,
+            containerAnimation: scrollTween,
+            start: 'left center',
+            end: 'right center',
+            scrub: true,
+        }
+    })
+    .to(list, {opacity: 1, duration: .3})
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: list,
+            containerAnimation: scrollTween,
+            start: '110% center',
+            end: '150% center',
+            scrub: true,
+        }
+    })
+    .to(list, {opacity: .2, duration: .3})
+})
 
 
 
