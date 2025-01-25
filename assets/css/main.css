@@ -235,6 +235,9 @@ section.about-us .area5 .clock-wrap svg {
   width: 100%;
   height: auto;
 }
+section.about-us .area6 {
+  margin-bottom: 26rem;
+}
 section.about-us .area6 .wrap {
   position: relative;
 }
@@ -252,4 +255,28 @@ section.about-us .area6 .bg-wrap .bg-img-list .img {
 }
 section.about-us .area6 .bg-wrap .bg-img-list .img img {
   width: 100%;
+  border-radius: 3rem;
+}
+section.about-us .area6 .tag {
+  position: absolute;
+}
+section.about-us .area6 .tag:first-of-type {
+  top: 6rem;
+  width: 100%;
+  text-align: center;
+}
+section.about-us .area6 .tag:last-of-type {
+  bottom: 6rem;
+  width: 100%;
+  text-align: center;
+}
+section.about-us .area6 .box-text {
+  position: absolute;
+  top: 69rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+section.about-us .area6 .box-text .text-ko-wrap {
+  padding-left: 49.27%;
 }

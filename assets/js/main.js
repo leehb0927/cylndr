@@ -348,4 +348,15 @@ gsap.to('.main .about-us .area5 .bg-image', {
         end: '70% bottom',
         scrub: true
     }
+});
+
+
+
+
+
+/* .about-us .area6 */
+const showTextList4 = document.querySelectorAll('.main .about-us .area6 .line .units');
+showTextAnimation(showTextList4, '.main .area6', '50% bottom')
+showSubTextAnimation('.main .area6 .text-ko-wrap p', '.main .area6', {
+    start: '75% bottom',
 })

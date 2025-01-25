@@ -236,6 +236,7 @@ section {
             }
         }
         .area6 {
+            margin-bottom: 26rem;
             .wrap {
                 position: relative;
             }
@@ -250,8 +251,32 @@ section {
                         width: 100%;
                         img {
                             width: 100%;
+                            border-radius: 3rem;
                         }
                     }
+                }
+            }
+            .tag {
+                position: absolute;
+                &:first-of-type {
+                    top: 6rem;
+                    width: 100%;
+                    text-align: center;
+                }
+                &:last-of-type {
+                    bottom: 6rem;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .box-text {
+                position: absolute;
+                top: 69rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                .text-ko-wrap {
+                    padding-left: 49.27%;
                 }
             }
         }
