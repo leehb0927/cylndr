@@ -360,3 +360,42 @@ showTextAnimation(showTextList4, '.main .area6', '50% bottom')
 showSubTextAnimation('.main .area6 .text-ko-wrap p', '.main .area6', {
     start: '75% bottom',
 })
+
+/* 스크롤 내리면 이미지 변경 */
+//스크롤 거리에 맞춰서 .main .about-us .area6 .bg-img-list의 전체길이를 .main .about-us .area6 .bg-img-list li 길이만큼 n번 움직여서 이미지를 바꾼다.
+
+const area6ImgList = document.querySelector('.main .about-us .area6 .bg-img-list');
+const area6Imgs = document.querySelectorAll('.main .about-us .area6 .bg-img-list li');
+console.log(area6Imgs[0].offsetWidth)
+const area6ImgWidths = [...area6Imgs].map(img => img.getBoundingClientRect().width); 
+// offsetwidth는 정수값만 반환해 주는데 getBoundingClientRect().width는 소숫값까지 반환해준다.
+/* 
+[...] _ spread operator
+- 배열을 만들거나 기존 배열을 복사할 때 사용
+[...areaImgs] _ li요소들이 담겨있는 배열처럼 보이는 객체를 배열로 변환
+
+.map은 배열의 각 항목을 하나씩 처리하여 새로운 배열을 만들어주는 메소드
+*/
+
+const area6ImageTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.main .about-us .area6',
+        start: '60% bottom',
+        end: '65% top',
+        scrub: true,
+        // markers: true,
+        onUpdate: (self) => {
+            const progress = self.progress
+            let moveDistance = 0;
+
+            area6Imgs.forEach((img, index) => {
+                if (progress > (index / area6Imgs.length) && progress <= ((index + 1) / area6Imgs.length)) {
+                    moveDistance = area6ImgWidths.slice(0, index).reduce((a, b) => a + b, 0);
+                }
+            });
+
+            area6ImgList.style.transform = `translateX(-${moveDistance}px)`;
+        }
+    }
+});
+
