@@ -399,3 +399,69 @@ const area6ImageTimeline = gsap.timeline({
     }
 });
 
+
+
+
+
+/* .about-us .area7 */
+//텍스트 순서대로 등장
+/* gsap.to('.about-us .area7 .text-en', {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+        tirgger: '.about-us .area7 .text-en',
+        markers: true,
+        start: 'bottom bottom',
+        end: 'bottom top'
+    }
+}) */
+gsap.utils.toArray('.about-us .area7 .introduce-text .title-wrap').forEach(function(title) {
+    gsap.to(title, {
+        y: 0, opacity: 1,
+        scrollTrigger: {
+            trigger: title,
+            start: '300% bottom',
+            end: '500% bottom',
+            scrub: 1
+        }
+    }
+    )
+})
+
+gsap.utils.toArray('.about-us .area7 .introduce-text .text-en').forEach(function(textEn) {
+    gsap.to(textEn, {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: textEn,
+            start: '200% bottom',
+            end: '500% bottom',
+            scrub: 1
+        }
+    })
+})
+
+gsap.utils.toArray('.about-us .area7 .introduce-text .text-ko').forEach(function(textKo) {
+    gsap.to(textKo, {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: textKo,
+            start: '300% bottom',
+            end: '500% bottom',
+            scrub: 1
+        }
+    })
+})
+
+gsap.utils.toArray('.about-us .area7 .introduce-text .line').forEach(function(lines) {
+    gsap.to(lines, {
+        y: 0, opacity: 1,
+        scrollTrigger: {
+            trigger: lines,
+            start: '15000% bottom',
+            end: '20000% bottom',
+            scrub: 1
+        }
+    })
+})
