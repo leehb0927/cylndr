@@ -353,10 +353,15 @@ section {
             }
         }
         .area8 {
+            position: relative;
             .wrap {
-                position: relative;
+                /* 
+                부모를 gsap pin으로 고정하면 자식인 .wrap의 sticky가 정상 동작
+                - sticky는 부모의 스크롤 영역 내에서만 작동하는데 overflow: hidden은 스크롤을 차단시킴
+                */
                 width: 100%;
                 height: 100vh;
+                overflow: hidden;
                 .circle {
                     position: absolute;
                     top: 50%;
@@ -366,6 +371,65 @@ section {
                     height: 74px;
                     border-radius: 100%;
                     background-color: $color-blue;
+
+                    // width: 140vmax;
+                    // height: 140vmax;
+                }
+                .contents-box {
+                    @include flex-center;
+                    position: relative;
+                    width: 174.4rem;
+                    height: 100%;
+                    margin: 0 auto;
+                    transform: translateX(50vw);
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                    .text-box {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        .top-text {
+                            display: flex;
+                            gap: 13vw;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            .texts {
+                                text-align: center;
+
+                                opacity: 0;
+                                span {
+                                    font-family: $font-light;
+                                    font-size: 2.4rem;
+                                    line-height: 2.8rem;
+                                    letter-spacing: -.03em;
+                                }
+                                p {
+                                    font-family: $font-rhy-thin;
+                                    font-size: 6rem;
+                                    line-height: 7.2rem;
+                                }
+                            }
+                        }
+                        .bottom-text {
+                            position: absolute;
+                            width: 100%;
+                            bottom: 15%;
+                            text-align: center;
+                            font-family: $font-light;
+                            font-size: 2.4rem;
+                            line-height: 2.8rem;
+                            letter-spacing: -.03em;
+                            color: $color-black;
+
+                            opacity: 0;
+                        }
+                    }
                 }
             }
         }

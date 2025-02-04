@@ -465,3 +465,76 @@ gsap.utils.toArray('.about-us .area7 .introduce-text .line').forEach(function(li
         }
     })
 })
+
+
+
+
+
+
+/* .about-us .area8 */
+//화면 고정 & 커지는 원 & 텍스트 움직임이 스크롤에 맞춰 순서대로 진행
+ScrollTrigger.create({
+    trigger: '.about-us .area8',
+    pin: '.about-us .area8 .wrap',
+    start: 'top top',
+    end: '+=2500'
+})
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8 .wrap',
+        start: 'top top',
+        end: `${2500 + window.innerHeight}px bottom`,
+        scrub: 1,
+    }
+})
+/* .to('.about-us .area8 .circle', { width: '140vmax', height: '140vmax'})
+.to('.about-us .area8 .contents-box', {x: 0}, 0)
+.to('.about-us .area8 .contents-box svg .svg-logo-dim', {opacity: 0.15})
+.to('.about-us .area8 .contents-box .text-box .bottom-text', {opacity: 1}) */
+//여기에 한번에 타임라인을 작성하면 타이밍 조절이 안됨
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8',
+        start: 'top top',
+        end: `${500 + window.innerHeight}px bottom`, //위치를 지정해주기
+        scrub: 1,
+        // markers: true
+    }
+})
+.to('.about-us .area8 .circle', { width: '140vmax', height: '140vmax'})
+.to('.about-us .area8 .contents-box', {x: 0}, 0)
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8 ',
+        start: `${500 + window.innerHeight}px bottom`, //전 스크롤 트리거가 끝나는 지점을 시작점으로
+        end: `${520 + window.innerHeight}px bottom`,
+        scrub: 1,
+        // markers: true
+    }
+})
+.to('.about-us .area8 .contents-box svg .svg-logo-dim', {opacity: 0.15})
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8 ',
+        start: `${520 + window.innerHeight}px bottom`,
+        end: `${540 + window.innerHeight}px bottom`,
+        scrub: 1,
+        // markers: true
+    }
+})
+.to('.about-us .area8 .contents-box .text-box .bottom-text', {opacity: 1})
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8 ',
+        start: `${540 + window.innerHeight}px bottom`,
+        end: `${560 + window.innerHeight}px bottom`,
+        scrub: 1,
+        // markers: true
+    }
+})
+.to('.about-us .area8 .contents-box .text-box .top-text .texts', {opacity: 1})

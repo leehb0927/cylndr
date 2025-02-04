@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* variables */
 /* fonts */
 /* colors */
@@ -346,10 +347,17 @@ section.about-us .area7 .wrap .introduce-text .line {
   transform: translateY(4rem);
   opacity: 0;
 }
-section.about-us .area8 .wrap {
+section.about-us .area8 {
   position: relative;
+}
+section.about-us .area8 .wrap {
+  /* 
+  부모를 gsap pin으로 고정하면 자식인 .wrap의 sticky가 정상 동작
+  - sticky는 부모의 스크롤 영역 내에서만 작동하는데 overflow: hidden은 스크롤을 차단시킴
+  */
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 section.about-us .area8 .wrap .circle {
   position: absolute;
@@ -360,4 +368,60 @@ section.about-us .area8 .wrap .circle {
   height: 74px;
   border-radius: 100%;
   background-color: #2020c9;
+}
+section.about-us .area8 .wrap .contents-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 174.4rem;
+  height: 100%;
+  margin: 0 auto;
+  transform: translateX(50vw);
+}
+section.about-us .area8 .wrap .contents-box svg {
+  width: 100%;
+  height: auto;
+}
+section.about-us .area8 .wrap .contents-box .text-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+section.about-us .area8 .wrap .contents-box .text-box .top-text {
+  display: flex;
+  gap: 13vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.about-us .area8 .wrap .contents-box .text-box .top-text .texts {
+  text-align: center;
+  opacity: 0;
+}
+section.about-us .area8 .wrap .contents-box .text-box .top-text .texts span {
+  font-family: "Selecta-Light";
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.03em;
+}
+section.about-us .area8 .wrap .contents-box .text-box .top-text .texts p {
+  font-family: "RhymesDisplay-Thin";
+  font-size: 6rem;
+  line-height: 7.2rem;
+}
+section.about-us .area8 .wrap .contents-box .text-box .bottom-text {
+  position: absolute;
+  width: 100%;
+  bottom: 15%;
+  text-align: center;
+  font-family: "Selecta-Light";
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.03em;
+  color: #000;
+  opacity: 0;
 }
