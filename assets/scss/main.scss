@@ -400,9 +400,11 @@ section {
                             left: 50%;
                             transform: translate(-50%, -50%);
                             .texts {
+                                width: 14vw;
                                 text-align: center;
-
                                 opacity: 0;
+                                transform: perspective(1000px);
+                                transform-style: preserve-3d;
                                 span {
                                     font-family: $font-light;
                                     font-size: 2.4rem;
@@ -413,6 +415,36 @@ section {
                                     font-family: $font-rhy-thin;
                                     font-size: 6rem;
                                     line-height: 7.2rem;
+                                    /* transform: perspective(500px) rotateX(0);
+                                    transform-style: preserve-3d; */
+                                    transform-origin: 185.676px 53.4766px;
+                                }
+                            }
+                            &.box1 {
+                                .texts {
+                                    p {
+                                        transform: perspective(500px) rotateX(0);
+                                        transform-style: preserve-3d;
+                                    }
+                                }
+                            }
+                            &.box2 {
+                                .texts {
+                                    p {
+                                        opacity: 0;
+                                        transform: perspective(500px) rotateX(-90deg);
+                                        transform-style: preserve-3d;
+                                    }
+                                }
+                            }
+                            &.box3 {
+                                .texts {
+                                    p {
+                                        opacity: 0;
+                                        transform: perspective(500px) rotateX(-90deg);
+                                        transform-style: preserve-3d;
+                                        transform-origin: 50% 100%;
+                                    }
                                 }
                             }
                         }

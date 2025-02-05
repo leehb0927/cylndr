@@ -477,14 +477,14 @@ ScrollTrigger.create({
     trigger: '.about-us .area8',
     pin: '.about-us .area8 .wrap',
     start: 'top top',
-    end: '+=2500'
+    end: '+=3100'
 })
 
 gsap.timeline({
     scrollTrigger: {
         trigger: '.about-us .area8 .wrap',
         start: 'top top',
-        end: `${2500 + window.innerHeight}px bottom`,
+        end: `${3100 + window.innerHeight}px bottom`,
         scrub: 1,
     }
 })
@@ -500,7 +500,6 @@ gsap.timeline({
         start: 'top top',
         end: `${500 + window.innerHeight}px bottom`, //위치를 지정해주기
         scrub: 1,
-        // markers: true
     }
 })
 .to('.about-us .area8 .circle', { width: '140vmax', height: '140vmax'})
@@ -512,7 +511,6 @@ gsap.timeline({
         start: `${500 + window.innerHeight}px bottom`, //전 스크롤 트리거가 끝나는 지점을 시작점으로
         end: `${520 + window.innerHeight}px bottom`,
         scrub: 1,
-        // markers: true
     }
 })
 .to('.about-us .area8 .contents-box svg .svg-logo-dim', {opacity: 0.15})
@@ -523,7 +521,6 @@ gsap.timeline({
         start: `${520 + window.innerHeight}px bottom`,
         end: `${540 + window.innerHeight}px bottom`,
         scrub: 1,
-        // markers: true
     }
 })
 .to('.about-us .area8 .contents-box .text-box .bottom-text', {opacity: 1})
@@ -534,7 +531,110 @@ gsap.timeline({
         start: `${540 + window.innerHeight}px bottom`,
         end: `${560 + window.innerHeight}px bottom`,
         scrub: 1,
-        // markers: true
     }
 })
 .to('.about-us .area8 .contents-box .text-box .top-text .texts', {opacity: 1})
+
+//텍스트 roller
+/* action-1 */
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8 ',
+        start: `${560 + window.innerHeight}px bottom`,
+        end: `${900 + window.innerHeight}px bottom`,
+        scrub: 1,
+    }
+})
+.to('.about-us .area8 .contents-box .text-box .top-text.box1 .from p',
+    {
+        rotationX: 90,
+        opacity: 0,
+        transformOrigin: "50% 0%",
+    },
+    1
+)
+.to('.about-us .area8 .contents-box .text-box .top-text.box2 .from p',
+    {
+        rotationX: 0,
+        opacity: 1,
+        transformOrigin: "50% 100%"
+    },
+    1
+)
+
+
+/* action-2 */
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8 ',
+        start: `${1200 + window.innerHeight}px bottom`,
+        end: `${1550 + window.innerHeight}px bottom`,
+        scrub: 1,
+    }
+})
+.to('.about-us .area8 .contents-box .text-box .top-text.box1 .to p',
+    {
+        rotationX: 90,
+        opacity: 0,
+        transformOrigin: "50% 0%"
+    },
+    1
+)
+.to('.about-us .area8 .contents-box .text-box .top-text.box2 .to p',
+    {
+        rotationX: 0,
+        opacity: 1
+    },
+    1
+)
+
+
+/* action-3 */
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8 ',
+        start: `${1900 + window.innerHeight}px bottom`,
+        end: `${2250 + window.innerHeight}px bottom`,
+        scrub: 1,
+    }
+})
+.to('.about-us .area8 .contents-box .text-box .top-text.box2 .from p',
+    {
+        rotationX: 90,
+        opacity: 0,
+        transformOrigin: "50% 0%"
+    },
+    1
+)
+.to('.about-us .area8 .contents-box .text-box .top-text.box3 .from p',
+    {
+        rotationX: 0,
+        opacity: 1
+    },
+    1
+)
+
+/* action-4 */
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area8 ',
+        start: `${2600 + window.innerHeight}px bottom`,
+        end: `${2950 + window.innerHeight}px bottom`,
+        scrub: 1,
+    }
+})
+.to('.about-us .area8 .contents-box .text-box .top-text.box2 .to p',
+    {
+        rotationX: 90,
+        opacity: 0,
+        transformOrigin: "50% 0%"
+    },
+    1
+)
+.to('.about-us .area8 .contents-box .text-box .top-text.box3 .to p',
+    {
+        rotationX: 0,
+        opacity: 1
+    },
+    1
+)

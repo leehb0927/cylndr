@@ -399,8 +399,11 @@ section.about-us .area8 .wrap .contents-box .text-box .top-text {
   transform: translate(-50%, -50%);
 }
 section.about-us .area8 .wrap .contents-box .text-box .top-text .texts {
+  width: 14vw;
   text-align: center;
   opacity: 0;
+  transform: perspective(1000px);
+  transform-style: preserve-3d;
 }
 section.about-us .area8 .wrap .contents-box .text-box .top-text .texts span {
   font-family: "Selecta-Light";
@@ -412,6 +415,24 @@ section.about-us .area8 .wrap .contents-box .text-box .top-text .texts p {
   font-family: "RhymesDisplay-Thin";
   font-size: 6rem;
   line-height: 7.2rem;
+  /* transform: perspective(500px) rotateX(0);
+  transform-style: preserve-3d; */
+  transform-origin: 185.676px 53.4766px;
+}
+section.about-us .area8 .wrap .contents-box .text-box .top-text.box1 .texts p {
+  transform: perspective(500px) rotateX(0);
+  transform-style: preserve-3d;
+}
+section.about-us .area8 .wrap .contents-box .text-box .top-text.box2 .texts p {
+  opacity: 0;
+  transform: perspective(500px) rotateX(-90deg);
+  transform-style: preserve-3d;
+}
+section.about-us .area8 .wrap .contents-box .text-box .top-text.box3 .texts p {
+  opacity: 0;
+  transform: perspective(500px) rotateX(-90deg);
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
 }
 section.about-us .area8 .wrap .contents-box .text-box .bottom-text {
   position: absolute;
