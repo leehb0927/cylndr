@@ -471,6 +471,9 @@ gsap.utils.toArray('.about-us .area7 .introduce-text .line').forEach(function(li
 
 
 
+
+
+
 /* .about-us .area8 */
 //화면 고정 & 커지는 원 & 텍스트 움직임이 스크롤에 맞춰 순서대로 진행
 ScrollTrigger.create({
@@ -480,14 +483,14 @@ ScrollTrigger.create({
     end: '+=3100'
 })
 
-gsap.timeline({
+/* gsap.timeline({
     scrollTrigger: {
         trigger: '.about-us .area8 .wrap',
         start: 'top top',
         end: `${3100 + window.innerHeight}px bottom`,
         scrub: 1,
     }
-})
+}) */
 /* .to('.about-us .area8 .circle', { width: '140vmax', height: '140vmax'})
 .to('.about-us .area8 .contents-box', {x: 0}, 0)
 .to('.about-us .area8 .contents-box svg .svg-logo-dim', {opacity: 0.15})
@@ -638,3 +641,85 @@ gsap.timeline({
     },
     1
 )
+
+
+
+
+
+
+
+
+
+
+/* .about-us .area9 */
+//.area9 보이기 시작하면 배경색 변함
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area9 .text-box',
+        start: 'top bottom',
+        end: '65% bottom',
+        scrub: 2,
+    }
+})
+.to('.about-us .area8 .circle', {backgroundColor: '#000'}, 0)
+.to('.about-us .area9', {backgroundColor: '#000'}, 0)
+
+
+
+//텍스트 이동 scrollTrigger
+const area9Lines = [
+    {selector: '.about-us .area9 .line1', xValue: '80rem'},
+    {selector: '.about-us .area9 .line2', xValue: '-160rem'},
+    {selector: '.about-us .area9 .line3', xValue: '120rem'},
+    {selector: '.about-us .area9 .line4', xValue: '-112rem'},
+    {selector: '.about-us .area9 .line5', xValue: '56rem'},
+    {selector: '.about-us .area9 .line6', xValue: '-72rem'},
+    {selector: '.about-us .area9 .line7', xValue: '96rem'},
+]
+
+area9Lines.forEach(line => {
+    gsap.to(line.selector, {
+        x: line.xValue,
+        scrollTrigger: {
+            trigger: line.selector,
+            start: 'top bottom',
+            end: '150% top',
+            scrub: true,
+        }
+    })
+})
+
+
+
+
+
+
+
+
+/* .about-us .horizontal-wrap */
+//가로스크롤
+//이미지 고정 pin
+gsap.to('.about-us .horizontal-wrap .area10 .inner', {
+    width: '100%',
+    scrollTrigger: {
+        trigger: '.about-us .horizontal-wrap .area10',
+        start: 'top top',
+        end: '600%',
+        scrub: 1,
+        pin: true,
+        markers: true,
+    }
+})
+/* const horiList = gsap.utils.toArray('.about-us .horizontal-wrap > div');
+const horiScrollTween = gsap.to(horiList, {
+    xPercent: -100 * (horiList.length - 1),
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.about-us .horizontal-wrap',
+        start: 'top top',
+        end: '200%',
+        pin: true,
+        scrub: 1,
+        markers: true
+    }
+}) */

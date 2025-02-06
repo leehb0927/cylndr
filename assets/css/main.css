@@ -432,7 +432,6 @@ section.about-us .area8 .wrap .contents-box .text-box .top-text.box3 .texts p {
   opacity: 0;
   transform: perspective(500px) rotateX(-90deg);
   transform-style: preserve-3d;
-  transform-origin: 50% 100%;
 }
 section.about-us .area8 .wrap .contents-box .text-box .bottom-text {
   position: absolute;
@@ -444,5 +443,123 @@ section.about-us .area8 .wrap .contents-box .text-box .bottom-text {
   line-height: 2.8rem;
   letter-spacing: -0.03em;
   color: #000;
+  opacity: 0;
+}
+section.about-us .area9 {
+  padding-top: 20rem;
+  background-color: #2020c9;
+}
+section.about-us .area9 .text-box {
+  position: relative;
+  transform: translateY(36rem);
+  z-index: 1;
+}
+section.about-us .area9 .text-box li {
+  position: relative;
+  display: flex;
+  left: 50%;
+}
+section.about-us .area9 .text-box li p {
+  text-align: left;
+  font-family: "RhymesDisplay-Thin";
+  font-size: 23rem;
+  line-height: 22rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+section.about-us .area9 .text-box li small {
+  font-family: "Selecta-Light";
+}
+section.about-us .area9 .text-box li.line1 {
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: -66rem;
+}
+section.about-us .area9 .text-box li.line1 small {
+  position: relative;
+  bottom: -3rem;
+  margin-left: 1rem;
+  font-size: 4.6rem;
+  line-height: 5rem;
+}
+section.about-us .area9 .text-box li.line2 {
+  margin-left: -96rem;
+}
+section.about-us .area9 .text-box li.line3 {
+  margin-left: -62rem;
+}
+section.about-us .area9 .text-box li.line4 {
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -90rem;
+}
+section.about-us .area9 .text-box li.line4 small {
+  margin: 0 11rem;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: -0.02em;
+}
+section.about-us .area9 .text-box li.line5 {
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: -79rem;
+}
+section.about-us .area9 .text-box li.line5 small {
+  position: relative;
+  bottom: -3rem;
+  margin-right: 9rem;
+  text-align: left;
+  font-size: 4.6rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+}
+section.about-us .area9 .text-box li.line6 {
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -83rem;
+}
+section.about-us .area9 .text-box li.line6 small {
+  margin-left: 16rem;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: -0.02em;
+}
+section.about-us .area9 .text-box li.line7 {
+  margin-left: -100rem;
+}
+section.about-us .horizontal-wrap {
+  display: flex;
+}
+section.about-us .horizontal-wrap > div {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+section.about-us .horizontal-wrap .area10 {
+  padding: 22.1875px 14.7917px;
+  box-sizing: border-box;
+}
+section.about-us .horizontal-wrap .area10 .inner {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+section.about-us .horizontal-wrap .area10 .inner .image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  z-index: -1;
+}
+section.about-us .horizontal-wrap .area10 .inner .image-wrap.dark {
   opacity: 0;
 }
