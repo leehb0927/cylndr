@@ -530,10 +530,10 @@ section.about-us .area9 .text-box li.line6 small {
 section.about-us .area9 .text-box li.line7 {
   margin-left: -100rem;
 }
-section.about-us .horizontal-wrap {
+section.about-us .horizontal-wrap .wrap {
   display: flex;
 }
-section.about-us .horizontal-wrap > div {
+section.about-us .horizontal-wrap .wrap > div {
   width: 100vw;
   height: 100vh;
   flex-shrink: 0;

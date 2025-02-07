@@ -552,12 +552,14 @@ section {
 
         //.area10, .area11
         .horizontal-wrap {
-            display: flex;
-            > div {
-                width: 100vw;
-                height: 100vh;
-                flex-shrink: 0;
-                overflow: hidden;
+            .wrap {
+                display: flex;
+                > div {
+                    width: 100vw;
+                    height: 100vh;
+                    flex-shrink: 0;
+                    overflow: hidden;
+                }
             }
             .area10 {
                 padding: 22.1875px 14.7917px;

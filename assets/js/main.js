@@ -366,7 +366,6 @@ showSubTextAnimation('.main .area6 .text-ko-wrap p', '.main .area6', {
 
 const area6ImgList = document.querySelector('.main .about-us .area6 .bg-img-list');
 const area6Imgs = document.querySelectorAll('.main .about-us .area6 .bg-img-list li');
-console.log(area6Imgs[0].offsetWidth)
 const area6ImgWidths = [...area6Imgs].map(img => img.getBoundingClientRect().width); 
 // offsetwidth는 정수값만 반환해 주는데 getBoundingClientRect().width는 소숫값까지 반환해준다.
 /* 
@@ -480,7 +479,8 @@ ScrollTrigger.create({
     trigger: '.about-us .area8',
     pin: '.about-us .area8 .wrap',
     start: 'top top',
-    end: '+=3100'
+    end: '+=3100',
+    markers: true
 })
 
 /* gsap.timeline({
@@ -699,27 +699,45 @@ area9Lines.forEach(line => {
 /* .about-us .horizontal-wrap */
 //가로스크롤
 //이미지 고정 pin
-gsap.to('.about-us .horizontal-wrap .area10 .inner', {
-    width: '100%',
+/*
+    height를 늘려서 영역이 겹치게 pin애니메이션이 종료되는 것 막고
+    첫번째 pin이 풀리면 다음 pin(가로스크롤) 연결되도록
+    
+*/
+const horiList = gsap.utils.toArray('.about-us .horizontal-wrap .wrap > div');
+//가로스크롤 영역 width
+const totalWidth = horiList.reduce((total, el) => total + el.offsetWidth, 0);
+//width가 커질때까지 걸리는 스크롤 거리
+const horiWidthScrollArea = 1800;
+gsap.timeline({
     scrollTrigger: {
-        trigger: '.about-us .horizontal-wrap .area10',
+        trigger: '.about-us .horizontal-wrap',
+        pin: '.about-us .horizontal-wrap .wrap',
         start: 'top top',
-        end: '600%',
-        scrub: 1,
-        pin: true,
-        markers: true,
+        end: `+=${horiWidthScrollArea}+=450%`,
+        markers: true
+        //총 스크롤 거리는 width커질때가지 걸리는 스크롤 거리 가로 스크롤 영역 200%(div가 두개임)
     }
 })
-/* const horiList = gsap.utils.toArray('.about-us .horizontal-wrap > div');
-const horiScrollTween = gsap.to(horiList, {
+//이미지 width가 늘어나고 dark이미지로 변경됨
+gsap.timeline({
+    scrollTrigger: {
+        trigger :'.about-us .horizontal-wrap',
+        start: 'top top',
+        end: `+=${horiWidthScrollArea-800}`,
+        scrub: .3,
+    }
+})
+.to('.about-us .horizontal-wrap .wrap .area10 .inner', {width: '100%',}, 0)
+.to('.about-us .horizontal-wrap .wrap .area10 .inner .dark', {opacity: 1}, 0)
+//스크롤이 x축으로 이동
+gsap.to(horiList, {
     xPercent: -100 * (horiList.length - 1),
     ease: 'none',
     scrollTrigger: {
-        trigger: '.about-us .horizontal-wrap',
-        start: 'top top',
-        end: '200%',
-        pin: true,
-        scrub: 1,
-        markers: true
+        trigger :'.about-us .horizontal-wrap',
+        start: `+=${horiWidthScrollArea} bottom`,
+        end: `+=${horiWidthScrollArea}+=200%`,
+        scrub: .3,
     }
-}) */
+})
