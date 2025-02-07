@@ -563,3 +563,29 @@ section.about-us .horizontal-wrap .area10 .inner .image-wrap img {
 section.about-us .horizontal-wrap .area10 .inner .image-wrap.dark {
   opacity: 0;
 }
+section.about-us .horizontal-wrap .area10 .inner .image-wrap.night {
+  opacity: 0;
+}
+section.about-us .horizontal-wrap .area11 {
+  position: relative;
+}
+section.about-us .horizontal-wrap .area11 .text-box {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  margin: 0 auto;
+}
+section.about-us .horizontal-wrap .area11 .text-box .show-text-wrap {
+  padding-left: 2.86%;
+  width: 100%;
+}
+section.about-us .horizontal-wrap .area11 .text-box .show-text-wrap .line .units {
+  transform: translateY(0);
+}
+section.about-us .horizontal-wrap .area11 .text-box .text-ko-wrap {
+  padding-left: 36.45%;
+}
+section.about-us .horizontal-wrap .area11 .text-box .text-ko-wrap p {
+  transform: translateY(0);
+  opacity: 1;
+}

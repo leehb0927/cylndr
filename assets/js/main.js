@@ -480,7 +480,7 @@ ScrollTrigger.create({
     pin: '.about-us .area8 .wrap',
     start: 'top top',
     end: '+=3100',
-    markers: true
+    // markers: true
 })
 
 /* gsap.timeline({
@@ -709,13 +709,15 @@ const horiList = gsap.utils.toArray('.about-us .horizontal-wrap .wrap > div');
 const totalWidth = horiList.reduce((total, el) => total + el.offsetWidth, 0);
 //width가 커질때까지 걸리는 스크롤 거리
 const horiWidthScrollArea = 1800;
+//여유 스크롤 길이 _ 이 길이가 없으면 바로 가로스크롤로 넘어가버려 width 100%가 완전히 된 형상이 화면에 보이게 한 후 가로스크롤로 넘어가게 하기 위함
+const horiWidthScrollBlank = 800;
+
 gsap.timeline({
     scrollTrigger: {
         trigger: '.about-us .horizontal-wrap',
         pin: '.about-us .horizontal-wrap .wrap',
         start: 'top top',
         end: `+=${horiWidthScrollArea}+=450%`,
-        markers: true
         //총 스크롤 거리는 width커질때가지 걸리는 스크롤 거리 가로 스크롤 영역 200%(div가 두개임)
     }
 })
@@ -724,12 +726,35 @@ gsap.timeline({
     scrollTrigger: {
         trigger :'.about-us .horizontal-wrap',
         start: 'top top',
-        end: `+=${horiWidthScrollArea-800}`,
+        end: `+=${horiWidthScrollArea-horiWidthScrollBlank} `,
         scrub: .3,
+        // markers: true
     }
 })
 .to('.about-us .horizontal-wrap .wrap .area10 .inner', {width: '100%',}, 0)
-.to('.about-us .horizontal-wrap .wrap .area10 .inner .dark', {opacity: 1}, 0)
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger :'.about-us .horizontal-wrap',
+        start: 'top top',
+        end: `+=${(horiWidthScrollArea - horiWidthScrollBlank) * 0.5}`,
+        scrub: .3,
+        // markers: true
+    }
+})
+.to('.about-us .horizontal-wrap .wrap .area10 .inner .dark', {opacity: 1,}, 0)
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger :'.about-us .horizontal-wrap',
+        start: `+=${(horiWidthScrollArea - horiWidthScrollBlank) * 0.5} top`,
+        end: `+=${(horiWidthScrollArea - horiWidthScrollBlank)}`,
+        scrub: .3,
+        // markers: true
+    }
+})
+.to('.about-us .horizontal-wrap .wrap .area10 .inner .night', {opacity: 1,}, 0)
+
 //스크롤이 x축으로 이동
 gsap.to(horiList, {
     xPercent: -100 * (horiList.length - 1),

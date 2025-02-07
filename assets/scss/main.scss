@@ -584,6 +584,35 @@ section {
                         &.dark {
                             opacity: 0;
                         }
+                        &.night {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+
+            .area11 {
+                position: relative;
+                .text-box {
+                    position: absolute;
+                    bottom: 10%;
+                    width: 100%;
+                    margin: 0 auto;
+                    .show-text-wrap {
+                        padding-left: 2.86%;
+                        width: 100%;
+                        .line {
+                            .units {
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                    .text-ko-wrap {
+                        padding-left: 36.45%;
+                        p {
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
                     }
                 }
             }
