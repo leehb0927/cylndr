@@ -766,3 +766,15 @@ gsap.to(horiList, {
         scrub: .3,
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+/* .about-us .area12 */

@@ -622,11 +622,191 @@ section {
 
         .area12 {
             .horizontal-wrap {
-                width: 100%;
-                height: 100vh;
-                background-color: $color-green;
-                padding-left: 160rem;
+
+                display: flex;
+                // padding-left: 160rem;
                 .page {
+                    position: relative;
+                    height: 100%;
+                    flex-shrink: 0;
+                    background-color: $color-green;
+                    .contents {
+                        position: absolute;
+                        z-index: 3;
+                        h2, p, span {
+                            color: $color-black;
+                        }
+                        h2, h2 span {
+                            font-family: $font-rhy-thin;
+                            font-size: 20rem;
+                            line-height: 18rem;
+                            font-weight: unset;
+                        }
+                        p, span {
+                            font-family: $font-light;
+                            font-size: 1.6rem;
+                            line-height: 2rem;
+                            letter-spacing: -.02em;
+                        }
+                        span {
+                            display: block;
+                        }
+                        .eng {
+                            font-size: 2.4rem;
+                            line-height: 2.8rem;
+                            letter-spacing: -.01em;
+                        }
+                        .ko {
+                            margin-top: 3rem;
+                            font-size: 1.8rem;
+                            line-height: 2.9rem;
+                            letter-spacing: -.03em;
+                        }
+                        .image-box {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: end;
+                            .image {
+                                border-radius: 3rem;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            span {
+                                margin-top: 1.4rem;
+                                font-size: 1.2rem;
+                                line-height: 1.5rem;
+                                letter-spacing: -.03em;
+                            }
+                        }
+                    }
+                    &.page1 {
+                        width: 221.3rem;
+                        height: 100vh;
+                        .contents {
+                            &.contents1 {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                bottom: 4%;
+                                left: 4rem;
+                                height: 56.5rem;
+                                max-height: 96%;
+                            }
+                            &.contents2 {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                top: 9%;
+                                left: 87rem;
+                                height: 86rem;
+                                max-width: 91%;
+                                padding-bottom: 4rem;
+                                h2 {
+                                    text-align: right;
+                                }
+                                .image-box {
+                                    margin-left: 31.8rem;
+                                    .image {
+                                        width: 49rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.page2 {
+                        width: 209rem;
+                        height: 100vh;
+                        .contents1 {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            height: 86rem;
+                            max-width: 90%;
+                            padding-bottom: 4rem;
+                            top: 10%;
+                            left: 15rem;
+                            h2 {
+                                position: relative;
+                                margin-left: 6rem;
+                                span {
+                                    &:last-of-type {
+                                        text-indent: 27rem;
+                                    }
+                                }
+                                small {
+                                    position: absolute;
+                                    top: 20rem;
+                                    left: 13rem;
+                                    font-family: $font-light;
+                                    font-size: 4.6rem;
+                                    line-height: 4.2rem;
+                                    letter-spacing: -.06em;
+                                    color: $color-black;
+                                }
+                            }
+                        }
+                        .contents2 {
+                            top: 11%;
+                            left: 100rem;
+                            z-index: 2;
+                            .image {
+                                width: 67rem;
+                            }
+                        }
+                    }
+                    &.page3 {
+                        width: 276.2rem;
+                        height: 100vh;
+                    }
+                    .contents1 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        margin-top: -16%;
+                        top: 50%;
+                        left: 76rem;
+                        height: 80rem;
+                        max-height: 100%;
+                        h2 {
+                            span {
+                                &:nth-of-type(2) {
+                                    text-indent: 20rem;
+                                }
+                                &:nth-of-type(3) {
+                                    text-indent: -9rem;
+                                }
+                            }
+                        }
+                        .desc {
+                            padding-left: 13rem;
+                        }
+                    }
+                    .contents2 {
+                        z-index: 2;
+                        bottom: 5%;
+                        left: 45.5rem;
+                        .image-box {
+                            .image {
+                                width: 37rem;
+                            }
+                        }
+                    }
+                    .contents3 {
+                        z-index: 4;
+                        top: 22%;
+                        left: 164.8rem;
+                        .image-box {
+                            .image {
+                                width: 67.4rem;
+                            }
+                        }
+                    }
                 }
             }
         }
