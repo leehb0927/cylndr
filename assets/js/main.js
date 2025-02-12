@@ -764,6 +764,7 @@ gsap.to(horiList, {
         start: `+=${horiWidthScrollArea} bottom`,
         end: `+=${horiWidthScrollArea}+=200%`,
         scrub: .3,
+
     }
 })
 
