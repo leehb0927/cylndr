@@ -479,7 +479,7 @@ ScrollTrigger.create({
     trigger: '.about-us .area8',
     pin: '.about-us .area8 .wrap',
     start: 'top top',
-    end: '+=3100',
+    end: '+=3100', //start 위치에서 3100px만큼 스크롤이 진행되었을 때 end됨
     // markers: true
 })
 
@@ -546,6 +546,7 @@ gsap.timeline({
         start: `${560 + window.innerHeight}px bottom`,
         end: `${900 + window.innerHeight}px bottom`,
         scrub: 1,
+        markers: true
     }
 })
 .to('.about-us .area8 .contents-box .text-box .top-text.box1 .from p',
