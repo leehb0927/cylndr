@@ -31,6 +31,16 @@ gsap.ticker.lagSmoothing(0)
 }) */
 
 
+
+
+
+
+
+
+
+
+/* header */
+// header nav 특정 위치에서 사라짐
 let navPin = gsap.timeline({
     scrollTrigger: {
         trigger: '.header nav',
@@ -53,8 +63,7 @@ let navPin = gsap.timeline({
     }
 });
 
-
-/* header 시계 */
+// header 시계
 const currentTime = document.querySelector('.header-inner .header-bottom .time');
 
 function updateTime() {
@@ -84,26 +93,12 @@ delay _ 호출 간격을 밀리초 (1초  = 1000밀리초)단위로 설정
 
 
 
-/* .about-us .area1 */
 
 
-//두 동작을 바로 잇기
-/* gsap.timeline({
-    scrollTrigger: {
-        trigger: '.main .area1',
-        start: 'top bottom',
-    }
-})
-.to(showTextList, { y: 0, delay: (index) => index * 0.03 })
-.to('.main .about-us .area1 .text-ko-wrap p', {y: 0, opacity: 1, duration: 1}, 1.6) */
 
-//두 동작에 scrollTrigger을 따로따로 주기
-/* 
-    showTextList에 포함된 각 요소(element)에 대해 반복을 진행
-    element _ 반복문 내에서 현재 요소 (.units)
-    index _ 반복문에서 현재 요소의 인덱스
-    */
 
+
+/* about-us 공통 */
 //.show-text-wrap 공통 함수
 function showTextAnimation(elements, trigger, startPoint, markers = false) {
     elements.forEach((element, index) => {
@@ -142,8 +137,35 @@ function showSubTextAnimation(elements, trigger, options = {}) {
     })
 }
 
-const showTextList = document.querySelectorAll('.main .about-us .area1 .line .units');
+
+
+
+
+
+
+
+
+
+/* .about-us .area1 */
+//두 동작을 바로 잇기
+/* gsap.timeline({
+    scrollTrigger: {
+        trigger: '.main .area1',
+        start: 'top bottom',
+    }
+})
+.to(showTextList, { y: 0, delay: (index) => index * 0.03 })
+.to('.main .about-us .area1 .text-ko-wrap p', {y: 0, opacity: 1, duration: 1}, 1.6) */
+
+//두 동작에 scrollTrigger을 따로따로 주기
+/* 
+    showTextList에 포함된 각 요소(element)에 대해 반복을 진행
+    element _ 반복문 내에서 현재 요소 (.units)
+    index _ 반복문에서 현재 요소의 인덱스
+    */
+
 //공통 기능을 함수로 추출한 것을 적용
+const showTextList = document.querySelectorAll('.main .about-us .area1 .line .units');
 showTextAnimation(showTextList, '.main .area1', 'top bottom')
 showSubTextAnimation('.main .about-us .area1 .text-ko-wrap p', '.main .area1');
 
@@ -173,9 +195,15 @@ showSubTextAnimation('.main .about-us .area1 .text-ko-wrap p', '.main .area1');
 
 
 
+
+
+
+
+
+
 /* .about-us .area2 */
-const showTextList2 = document.querySelectorAll('.main .about-us .area2 .line .units');
 //텍스트 나타나는 애니메이션
+const showTextList2 = document.querySelectorAll('.main .about-us .area2 .line .units');
 showTextAnimation(showTextList2, '.main .area2', '70% bottom');
 showSubTextAnimation('.main .about-us .area2 .text-ko-wrap p', '.main .area2');
 
@@ -198,7 +226,6 @@ function cardSlideScrollTrigger() {
 cardSlideScrollTrigger();
 
 window.addEventListener('resize', cardSlideScrollTrigger);
-
 
 //카드리스트 이동 스크롤 트리거
 /* 
@@ -243,6 +270,13 @@ gsap.utils.toArray('.main .about-us .area2 li .img').forEach(function(list) {
 
 
 
+
+
+
+
+
+
+
 /* .about-us .area3 */
 const showTextList3 = document.querySelectorAll('.main .about-us .area3 .line .units');
 //텍스트 나타나는 애니메이션
@@ -251,6 +285,11 @@ showSubTextAnimation('.main .about-us .area3 .text-ko-wrap p', '.main .area3', {
     start : '150% bottom',
     end : '150% bottom',
 });
+
+
+
+
+
 
 
 
@@ -338,6 +377,11 @@ CityScrollAnimation(evenCity, 'even');
 
 
 
+
+
+
+
+
 /* .about-us .area5 */
 gsap.to('.main .about-us .area5 .bg-image', {
     opacity: 1,
@@ -349,6 +393,11 @@ gsap.to('.main .about-us .area5 .bg-image', {
         scrub: true
     }
 });
+
+
+
+
+
 
 
 
@@ -397,6 +446,11 @@ const area6ImageTimeline = gsap.timeline({
         }
     }
 });
+
+
+
+
+
 
 
 
@@ -473,6 +527,7 @@ gsap.utils.toArray('.about-us .area7 .introduce-text .line').forEach(function(li
 
 
 
+
 /* .about-us .area8 */
 //화면 고정 & 커지는 원 & 텍스트 움직임이 스크롤에 맞춰 순서대로 진행
 ScrollTrigger.create({
@@ -539,7 +594,7 @@ gsap.timeline({
 .to('.about-us .area8 .contents-box .text-box .top-text .texts', {opacity: 1})
 
 //텍스트 roller
-/* action-1 */
+// action-1
 gsap.timeline({
     scrollTrigger: {
         trigger: '.about-us .area8 ',
@@ -566,8 +621,7 @@ gsap.timeline({
     1
 )
 
-
-/* action-2 */
+// action-2
 gsap.timeline({
     scrollTrigger: {
         trigger: '.about-us .area8 ',
@@ -592,8 +646,7 @@ gsap.timeline({
     1
 )
 
-
-/* action-3 */
+// action-3
 gsap.timeline({
     scrollTrigger: {
         trigger: '.about-us .area8 ',
@@ -618,7 +671,7 @@ gsap.timeline({
     1
 )
 
-/* action-4 */
+// action-4
 gsap.timeline({
     scrollTrigger: {
         trigger: '.about-us .area8 ',
@@ -665,8 +718,6 @@ gsap.timeline({
 .to('.about-us .area8 .circle', {backgroundColor: '#000'}, 0)
 .to('.about-us .area9', {backgroundColor: '#000'}, 0)
 
-
-
 //텍스트 이동 scrollTrigger
 const area9Lines = [
     {selector: '.about-us .area9 .line1', xValue: '80rem'},
@@ -689,6 +740,8 @@ area9Lines.forEach(line => {
         }
     })
 })
+
+
 
 
 
