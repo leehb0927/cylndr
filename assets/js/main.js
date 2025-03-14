@@ -833,3 +833,49 @@ gsap.to(horiList, {
 
 
 /* .about-us .area12 */
+
+//가로스크롤 구현
+const area12ScrollTween = gsap.to('.about-us .area12 .horizontal-wrap', {
+    x: () => -document.querySelector('.about-us .area12 .horizontal-wrap').scrollWidth + window.innerWidth,
+    scrollTrigger: {
+        trigger: '.area12',
+        start: '0% 30%',
+        end: '100% 100%',
+        scrub: 1,
+        // markers: true
+    }
+})
+
+//캔버스에 이미지 랜더시키기
+const area12CanvasRender = () => {
+    const canvas = document.querySelector('.area12 .object1');
+    const ctx = canvas.getContext('2d');
+
+    const img = new Image()
+
+    img.onload = function() {
+    // drawImage(이미지, x좌표, y좌표)
+        ctx.drawImage(img, 0, 0);
+    };    
+    // 이미지 파일 경로 지정
+    img.src = '/assets/image/area12/image_4/0.png';
+}
+
+area12CanvasRender();
+
+
+//캔버스 이미지 변경하기
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about-us .area12 .horizontal-wrap',
+        containerAnimation: area12ScrollTween,
+        start: '4% left',  // 시작을 왼쪽으로 설정
+        end: '13% left', 
+        scrub: 1,
+        markers: true, 
+        onUpdate: () => {
+
+        }
+    }
+})
+//onUpdate로 이미지를 1~49png를 end지점까지 바꿔내야함

@@ -603,7 +603,7 @@ section.about-us .area12 {
   background-color: #0f0;
   z-index: 0;
   margin-top: -100vh;
-  height: 500vh;
+  height: 1500vh;
 }
 section.about-us .area12 .sticky-wrap {
   position: sticky;
@@ -614,6 +614,7 @@ section.about-us .area12 .sticky-wrap {
 section.about-us .area12 .horizontal-wrap {
   display: flex;
   padding-left: 160rem;
+  width: 706.5rem;
 }
 section.about-us .area12 .horizontal-wrap .page {
   position: relative;
@@ -672,9 +673,17 @@ section.about-us .area12 .horizontal-wrap .page .contents .image-box span {
   line-height: 1.5rem;
   letter-spacing: -0.03em;
 }
+section.about-us .area12 .horizontal-wrap .page .object {
+  position: absolute;
+}
 section.about-us .area12 .horizontal-wrap .page.page1 {
   width: 221.3rem;
   height: 100vh;
+}
+section.about-us .area12 .horizontal-wrap .page.page1 .object {
+  width: 100rem;
+  top: -45rem;
+  left: -50rem;
 }
 section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents1 {
   display: flex;

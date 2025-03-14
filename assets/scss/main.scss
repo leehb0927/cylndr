@@ -630,7 +630,7 @@ section {
             background-color: $color-green;
             z-index: 0;
             margin-top: -100vh;
-            height: 500vh;
+            height: 1500vh;
             .sticky-wrap {
                 position: sticky;
                 top: 0;
@@ -640,6 +640,7 @@ section {
             .horizontal-wrap {
                 display: flex;
                 padding-left: 160rem;
+                width: calc(221.3rem + 209rem + 276.2rem);
                 .page {
                     position: relative;
                     height: 100%;
@@ -696,9 +697,17 @@ section {
                             }
                         }
                     }
+                    .object {
+                        position: absolute;
+                    }
                     &.page1 {
                         width: 221.3rem;
                         height: 100vh;
+                        .object {
+                            width: 100rem;
+                            top: -45rem;
+                            left: -50rem;
+                        }
                         .contents {
                             &.contents1 {
                                 display: flex;
