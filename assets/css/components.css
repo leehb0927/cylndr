@@ -11,7 +11,9 @@
 /* header */
 .header {
   position: relative;
+  width: 100%;
   background-color: #000;
+  overflow: hidden;
 }
 .header .bg-video {
   width: 100%;

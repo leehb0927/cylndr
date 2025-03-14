@@ -1,13 +1,17 @@
 @import 'config';
 
 .wrapper {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 section {
     &.about-us {
         position: relative;
         margin-top: -16rem;
+        .overflow-wrap {
+            width: 100%;
+            overflow: hidden;
+        }
         .area1 {
             margin-bottom: 51rem;
             .show-text-wrap {
@@ -595,6 +599,7 @@ section {
 
             .area11 {
                 position: relative;
+                background: $color-black;
                 .text-box {
                     position: absolute;
                     bottom: 10%;
@@ -622,11 +627,19 @@ section {
 
         .area12 {
             position: relative;
+            background-color: $color-green;
             z-index: 0;
+            margin-top: -100vh;
+            height: 500vh;
+            .sticky-wrap {
+                position: sticky;
+                top: 0;
+                width: 100%;
+                overflow: hidden;
+            }
             .horizontal-wrap {
                 display: flex;
                 padding-left: 160rem;
-                background-color: $color-green;
                 .page {
                     position: relative;
                     height: 100%;

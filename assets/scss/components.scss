@@ -3,7 +3,9 @@
 /* header */
 .header {
     position: relative;
+    width: 100%;
     background-color: $color-black;
+    overflow: hidden;
     .bg-video {
         width: 100%;
         padding-top: 22rem;

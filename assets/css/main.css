@@ -10,12 +10,16 @@
   }
 }
 .wrapper {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 section.about-us {
   position: relative;
   margin-top: -16rem;
+}
+section.about-us .overflow-wrap {
+  width: 100%;
+  overflow: hidden;
 }
 section.about-us .area1 {
   margin-bottom: 51rem;
@@ -572,6 +576,7 @@ section.about-us .horizontal-wrap .area10 .inner .image-wrap.night {
 }
 section.about-us .horizontal-wrap .area11 {
   position: relative;
+  background: #000;
 }
 section.about-us .horizontal-wrap .area11 .text-box {
   position: absolute;
@@ -595,12 +600,20 @@ section.about-us .horizontal-wrap .area11 .text-box .text-ko-wrap p {
 }
 section.about-us .area12 {
   position: relative;
+  background-color: #0f0;
   z-index: 0;
+  margin-top: -100vh;
+  height: 500vh;
+}
+section.about-us .area12 .sticky-wrap {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
 }
 section.about-us .area12 .horizontal-wrap {
   display: flex;
   padding-left: 160rem;
-  background-color: #0f0;
 }
 section.about-us .area12 .horizontal-wrap .page {
   position: relative;

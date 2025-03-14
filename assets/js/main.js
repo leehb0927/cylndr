@@ -601,7 +601,7 @@ gsap.timeline({
         start: `${560 + window.innerHeight}px bottom`,
         end: `${900 + window.innerHeight}px bottom`,
         scrub: 1,
-        markers: true
+        // markers: true
     }
 })
 .to('.about-us .area8 .contents-box .text-box .top-text.box1 .from p',
