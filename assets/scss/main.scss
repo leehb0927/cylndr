@@ -640,7 +640,7 @@ section {
             .horizontal-wrap {
                 display: flex;
                 padding-left: 160rem;
-                width: calc(221.3rem + 209rem + 276.2rem);
+                width: calc(221.3rem + 209rem + 276.2rem); //css로 width 강제해 주지 않으면 100vw로 width가 잡힘... velog에 적기
                 .page {
                     position: relative;
                     height: 100%;
