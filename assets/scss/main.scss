@@ -625,22 +625,23 @@ section {
             }
         }
 
-        .area12 {
+        .horizontal-area-wrap {
             position: relative;
-            background-color: $color-green;
             z-index: 0;
             margin-top: -100vh;
-            height: 1500vh;
+            height: 1300vh;
             .sticky-wrap {
                 position: sticky;
                 top: 0;
                 width: 100%;
                 overflow: hidden;
             }
-            .horizontal-wrap {
+            .area12 {
                 display: flex;
                 padding-left: 160rem;
                 width: calc(221.3rem + 209rem + 276.2rem); //css로 width 강제해 주지 않으면 100vw로 width가 잡힘... velog에 적기
+                background-color: $color-green;
+                border-radius: 0 5rem 5rem 0;
                 .page {
                     position: relative;
                     height: 100%;
@@ -850,6 +851,16 @@ section {
                     }
                 }
             }
+            /* .fade-slide {
+                position: relative;
+                z-index: 0;
+                margin-top: -100vh;
+                background-color: #fff;
+                .sticky-wrap {
+                    position: sticky;
+                    top: 0;
+                }
+            } */
         }
     }
 }

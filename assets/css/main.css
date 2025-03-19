@@ -598,90 +598,101 @@ section.about-us .horizontal-wrap .area11 .text-box .text-ko-wrap p {
   transform: translateY(0);
   opacity: 1;
 }
-section.about-us .area12 {
+section.about-us .horizontal-area-wrap {
   position: relative;
-  background-color: #0f0;
   z-index: 0;
   margin-top: -100vh;
-  height: 1500vh;
+  height: 1300vh;
+  /* .fade-slide {
+      position: relative;
+      z-index: 0;
+      margin-top: -100vh;
+      background-color: #fff;
+      .sticky-wrap {
+          position: sticky;
+          top: 0;
+      }
+  } */
 }
-section.about-us .area12 .sticky-wrap {
+section.about-us .horizontal-area-wrap .sticky-wrap {
   position: sticky;
   top: 0;
   width: 100%;
   overflow: hidden;
 }
-section.about-us .area12 .horizontal-wrap {
+section.about-us .horizontal-area-wrap .area12 {
   display: flex;
   padding-left: 160rem;
   width: 706.5rem;
+  background-color: #0f0;
+  border-radius: 0 5rem 5rem 0;
 }
-section.about-us .area12 .horizontal-wrap .page {
+section.about-us .horizontal-area-wrap .area12 .page {
   position: relative;
   height: 100%;
   flex-shrink: 0;
 }
-section.about-us .area12 .horizontal-wrap .page .contents {
+section.about-us .horizontal-area-wrap .area12 .page .contents {
   position: absolute;
   z-index: 3;
 }
-section.about-us .area12 .horizontal-wrap .page .contents h2, section.about-us .area12 .horizontal-wrap .page .contents p, section.about-us .area12 .horizontal-wrap .page .contents span {
+section.about-us .horizontal-area-wrap .area12 .page .contents h2, section.about-us .horizontal-area-wrap .area12 .page .contents p, section.about-us .horizontal-area-wrap .area12 .page .contents span {
   color: #000;
 }
-section.about-us .area12 .horizontal-wrap .page .contents h2, section.about-us .area12 .horizontal-wrap .page .contents h2 span {
+section.about-us .horizontal-area-wrap .area12 .page .contents h2, section.about-us .horizontal-area-wrap .area12 .page .contents h2 span {
   font-family: "RhymesDisplay-Thin";
   font-size: 20rem;
   line-height: 18rem;
   font-weight: unset;
 }
-section.about-us .area12 .horizontal-wrap .page .contents p, section.about-us .area12 .horizontal-wrap .page .contents span {
+section.about-us .horizontal-area-wrap .area12 .page .contents p, section.about-us .horizontal-area-wrap .area12 .page .contents span {
   font-family: "Selecta-Light";
   font-size: 1.6rem;
   line-height: 2rem;
   letter-spacing: -0.02em;
 }
-section.about-us .area12 .horizontal-wrap .page .contents span {
+section.about-us .horizontal-area-wrap .area12 .page .contents span {
   display: block;
 }
-section.about-us .area12 .horizontal-wrap .page .contents .eng {
+section.about-us .horizontal-area-wrap .area12 .page .contents .eng {
   font-size: 2.4rem;
   line-height: 2.8rem;
   letter-spacing: -0.01em;
 }
-section.about-us .area12 .horizontal-wrap .page .contents .ko {
+section.about-us .horizontal-area-wrap .area12 .page .contents .ko {
   margin-top: 3rem;
   font-size: 1.8rem;
   line-height: 2.9rem;
   letter-spacing: -0.03em;
 }
-section.about-us .area12 .horizontal-wrap .page .contents .image-box {
+section.about-us .horizontal-area-wrap .area12 .page .contents .image-box {
   display: flex;
   flex-direction: column;
   align-items: end;
 }
-section.about-us .area12 .horizontal-wrap .page .contents .image-box .image {
+section.about-us .horizontal-area-wrap .area12 .page .contents .image-box .image {
   border-radius: 3rem;
   overflow: hidden;
 }
-section.about-us .area12 .horizontal-wrap .page .contents .image-box .image img {
+section.about-us .horizontal-area-wrap .area12 .page .contents .image-box .image img {
   width: 100%;
   height: 100%;
 }
-section.about-us .area12 .horizontal-wrap .page .contents .image-box span {
+section.about-us .horizontal-area-wrap .area12 .page .contents .image-box span {
   margin-top: 1.4rem;
   font-size: 1.2rem;
   line-height: 1.5rem;
   letter-spacing: -0.03em;
 }
-section.about-us .area12 .horizontal-wrap .page .object {
+section.about-us .horizontal-area-wrap .area12 .page .object {
   position: absolute;
   opacity: 0.8;
 }
-section.about-us .area12 .horizontal-wrap .page.page1 {
+section.about-us .horizontal-area-wrap .area12 .page.page1 {
   width: 221.3rem;
   height: 100vh;
 }
-section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents1 {
+section.about-us .horizontal-area-wrap .area12 .page.page1 .contents.contents1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -691,7 +702,7 @@ section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents1 {
   height: 56.5rem;
   max-height: 96%;
 }
-section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents2 {
+section.about-us .horizontal-area-wrap .area12 .page.page1 .contents.contents2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -702,31 +713,31 @@ section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents2 {
   max-width: 91%;
   padding-bottom: 4rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents2 h2 {
+section.about-us .horizontal-area-wrap .area12 .page.page1 .contents.contents2 h2 {
   text-align: right;
 }
-section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents2 .image-box {
+section.about-us .horizontal-area-wrap .area12 .page.page1 .contents.contents2 .image-box {
   margin-left: 31.8rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents2 .image-box .image {
+section.about-us .horizontal-area-wrap .area12 .page.page1 .contents.contents2 .image-box .image {
   width: 49rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page1 .object1 {
+section.about-us .horizontal-area-wrap .area12 .page.page1 .object1 {
   width: 100rem;
   top: -56rem;
   left: -56rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page1 .object2 {
+section.about-us .horizontal-area-wrap .area12 .page.page1 .object2 {
   z-index: 1;
   width: 130rem;
   bottom: -55rem;
   left: 96rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page2 {
+section.about-us .horizontal-area-wrap .area12 .page.page2 {
   width: 209rem;
   height: 100vh;
 }
-section.about-us .area12 .horizontal-wrap .page.page2 .contents1 {
+section.about-us .horizontal-area-wrap .area12 .page.page2 .contents1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -736,14 +747,14 @@ section.about-us .area12 .horizontal-wrap .page.page2 .contents1 {
   top: 10%;
   left: 15rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page2 .contents1 h2 {
+section.about-us .horizontal-area-wrap .area12 .page.page2 .contents1 h2 {
   position: relative;
   margin-left: 6rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page2 .contents1 h2 span:last-of-type {
+section.about-us .horizontal-area-wrap .area12 .page.page2 .contents1 h2 span:last-of-type {
   text-indent: 27rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page2 .contents1 h2 small {
+section.about-us .horizontal-area-wrap .area12 .page.page2 .contents1 h2 small {
   position: absolute;
   top: 20rem;
   left: 13rem;
@@ -753,25 +764,25 @@ section.about-us .area12 .horizontal-wrap .page.page2 .contents1 h2 small {
   letter-spacing: -0.06em;
   color: #000;
 }
-section.about-us .area12 .horizontal-wrap .page.page2 .contents2 {
+section.about-us .horizontal-area-wrap .area12 .page.page2 .contents2 {
   top: 11%;
   left: 100rem;
   z-index: 2;
 }
-section.about-us .area12 .horizontal-wrap .page.page2 .contents2 .image {
+section.about-us .horizontal-area-wrap .area12 .page.page2 .contents2 .image {
   width: 67rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page2 .object3 {
+section.about-us .horizontal-area-wrap .area12 .page.page2 .object3 {
   z-index: 1;
   width: 100rem;
   top: -30%;
   left: 40rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 {
+section.about-us .horizontal-area-wrap .area12 .page.page3 {
   width: 276.2rem;
   height: 100vh;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents1 {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .contents.contents1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -783,32 +794,32 @@ section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents1 {
   left: 76rem;
   z-index: 3;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents1 h2 span:nth-of-type(2) {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .contents.contents1 h2 span:nth-of-type(2) {
   text-indent: 20rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents1 h2 span:nth-of-type(3) {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .contents.contents1 h2 span:nth-of-type(3) {
   text-indent: -9rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents1 .desc {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .contents.contents1 .desc {
   padding-left: 13rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents2 {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .contents.contents2 {
   z-index: 2;
   bottom: 5%;
   left: 45.5rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents2 .image {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .contents.contents2 .image {
   width: 37rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents3 {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .contents.contents3 {
   z-index: 4;
   top: 22%;
   left: 164.8rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents3 .image {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .contents.contents3 .image {
   width: 57.4rem;
 }
-section.about-us .area12 .horizontal-wrap .page.page3 .object4 {
+section.about-us .horizontal-area-wrap .area12 .page.page3 .object4 {
   z-index: 4;
   width: 85rem;
   bottom: 8%;
