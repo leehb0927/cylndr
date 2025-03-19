@@ -18,7 +18,7 @@ const lenis = new Lenis()
 lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time)=>{
-  lenis.raf(time * 1000)
+  lenis.raf(time * 750)
 })
 
 gsap.ticker.lagSmoothing(0)
@@ -846,36 +846,100 @@ const area12ScrollTween = gsap.to('.about-us .area12 .horizontal-wrap', {
     }
 })
 
-//캔버스에 이미지 랜더시키기
-const area12CanvasRender = () => {
-    const canvas = document.querySelector('.area12 .object1');
+
+const setupCanvasAnimation = ({ 
+    canvasSelector, // 캔버스 선택자 
+    imagePath,      // 이미지 경로 
+    totalFrames,    // 이미지 개수 
+    loopCount,      // 몇 바퀴 돌릴지 
+    scrollTrigger   // 스크롤 트리거 설정
+}) => {
+    const canvas = document.querySelector(canvasSelector);
     const ctx = canvas.getContext('2d');
 
-    const img = new Image()
+    const renderImage = (index = 0) => {
+        const img = new Image();
+        img.onload = function () {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0);
+        };
+        img.src = `${imagePath}/${index}.png`;
+    };
 
-    img.onload = function() {
-    // drawImage(이미지, x좌표, y좌표)
-        ctx.drawImage(img, 0, 0);
-    };    
-    // 이미지 파일 경로 지정
-    img.src = '/assets/image/area12/image_4/0.png';
-}
-
-area12CanvasRender();
-
-
-//캔버스 이미지 변경하기
-gsap.timeline({
-    scrollTrigger: {
-        trigger: '.about-us .area12 .horizontal-wrap',
-        containerAnimation: area12ScrollTween,
-        start: '4% left',  // 시작을 왼쪽으로 설정
-        end: '13% left', 
-        scrub: 1,
-        markers: true, 
-        onUpdate: () => {
-
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: scrollTrigger.trigger,
+            containerAnimation: scrollTrigger.containerAnimation,
+            start: scrollTrigger.start,
+            end: scrollTrigger.end,
+            scrub: scrollTrigger.scrub,
+            markers: scrollTrigger.markers,
+            onUpdate: (self) => {
+                let progress = self.progress * loopCount;
+                let frame = Math.round((progress * totalFrames) % totalFrames);
+                renderImage(frame);
+            }
         }
+    });
+};
+
+
+const scrollTriggerConfig = {
+    trigger: '.about-us .area12 .horizontal-wrap',
+    containerAnimation: area12ScrollTween,
+    scrub: 1,
+};
+
+
+setupCanvasAnimation({
+    canvasSelector: '.area12 .object1',
+    imagePath: '/assets/image/area12/image_4',
+    totalFrames: 100,
+    loopCount: 2,
+    scrollTrigger: {
+        ...scrollTriggerConfig,
+
+        // ... spread operator (스프레드 연산자)
+        // 속성들을 풀어서 객체에 복사해 준다.
+
+        start: '4% left',
+        end: '13% left'
+    }
+});
+
+setupCanvasAnimation({
+    canvasSelector: '.area12 .object2',
+    imagePath: '/assets/image/area12/image_1',
+    totalFrames: 49,
+    loopCount: 3,
+    scrollTrigger: {
+        ...scrollTriggerConfig,
+        start: '5% left',
+        end: '30% left',
     }
 })
-//onUpdate로 이미지를 1~49png를 end지점까지 바꿔내야함
+
+setupCanvasAnimation({
+    canvasSelector: '.area12 .object3',
+    imagePath: '/assets/image/area12/image_2',
+    totalFrames: 100,
+    loopCount: 2,
+    scrollTrigger: {
+        ...scrollTriggerConfig,
+        start: '16% left',
+        end: '40% left',
+    }
+})
+
+setupCanvasAnimation({
+    canvasSelector: '.area12 .object4',
+    imagePath: '/assets/image/area12/image_3',
+    totalFrames: 110,
+    loopCount: 2,
+    scrollTrigger: {
+        ...scrollTriggerConfig,
+        start: '28% left',
+        end: '65% left',
+        markers: true
+    }
+})

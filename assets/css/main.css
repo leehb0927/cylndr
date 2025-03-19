@@ -675,15 +675,11 @@ section.about-us .area12 .horizontal-wrap .page .contents .image-box span {
 }
 section.about-us .area12 .horizontal-wrap .page .object {
   position: absolute;
+  opacity: 0.8;
 }
 section.about-us .area12 .horizontal-wrap .page.page1 {
   width: 221.3rem;
   height: 100vh;
-}
-section.about-us .area12 .horizontal-wrap .page.page1 .object {
-  width: 100rem;
-  top: -45rem;
-  left: -50rem;
 }
 section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents1 {
   display: flex;
@@ -714,6 +710,17 @@ section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents2 .image
 }
 section.about-us .area12 .horizontal-wrap .page.page1 .contents.contents2 .image-box .image {
   width: 49rem;
+}
+section.about-us .area12 .horizontal-wrap .page.page1 .object1 {
+  width: 100rem;
+  top: -56rem;
+  left: -56rem;
+}
+section.about-us .area12 .horizontal-wrap .page.page1 .object2 {
+  z-index: 1;
+  width: 130rem;
+  bottom: -55rem;
+  left: 96rem;
 }
 section.about-us .area12 .horizontal-wrap .page.page2 {
   width: 209rem;
@@ -753,6 +760,12 @@ section.about-us .area12 .horizontal-wrap .page.page2 .contents2 {
 }
 section.about-us .area12 .horizontal-wrap .page.page2 .contents2 .image {
   width: 67rem;
+}
+section.about-us .area12 .horizontal-wrap .page.page2 .object3 {
+  z-index: 1;
+  width: 100rem;
+  top: -30%;
+  left: 40rem;
 }
 section.about-us .area12 .horizontal-wrap .page.page3 {
   width: 276.2rem;
@@ -794,4 +807,10 @@ section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents3 {
 }
 section.about-us .area12 .horizontal-wrap .page.page3 .contents.contents3 .image {
   width: 57.4rem;
+}
+section.about-us .area12 .horizontal-wrap .page.page3 .object4 {
+  z-index: 4;
+  width: 85rem;
+  bottom: 8%;
+  left: -5rem;
 }

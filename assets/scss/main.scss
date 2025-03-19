@@ -699,15 +699,11 @@ section {
                     }
                     .object {
                         position: absolute;
+                        opacity: .8;
                     }
                     &.page1 {
                         width: 221.3rem;
                         height: 100vh;
-                        .object {
-                            width: 100rem;
-                            top: -45rem;
-                            left: -50rem;
-                        }
                         .contents {
                             &.contents1 {
                                 display: flex;
@@ -739,6 +735,17 @@ section {
                                     }
                                 }
                             }
+                        }
+                        .object1 {
+                            width: 100rem;
+                            top: -56rem;
+                            left: -56rem;
+                        }
+                        .object2 {
+                            z-index: 1;
+                            width: 130rem;
+                            bottom: -55rem;
+                            left: 96rem;
                         }
                     }
                     &.page2 {
@@ -780,6 +787,12 @@ section {
                             .image {
                                 width: 67rem;
                             }
+                        }
+                        .object3 {
+                            z-index: 1;
+                            width: 100rem;
+                            top: -30%;
+                            left: 40rem;
                         }
                     }
                     &.page3 {
@@ -827,6 +840,12 @@ section {
                                     width: 57.4rem;
                                 }
                             }
+                        }
+                        .object4 {
+                            z-index: 4;
+                            width: 85rem;
+                            bottom: 8%;
+                            left: -5rem;
                         }
                     }
                 }
