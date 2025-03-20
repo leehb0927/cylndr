@@ -642,6 +642,7 @@ section {
                 width: calc(221.3rem + 209rem + 276.2rem); //css로 width 강제해 주지 않으면 100vw로 width가 잡힘... velog에 적기
                 background-color: $color-green;
                 border-radius: 0 5rem 5rem 0;
+                overflow: hidden;
                 .page {
                     position: relative;
                     height: 100%;
@@ -848,19 +849,20 @@ section {
                             bottom: 8%;
                             left: -5rem;
                         }
+                        .object5 {
+                            z-index: 1;
+                            width: 150rem;
+                            bottom: -30%;
+                            left: 180rem;
+                        }
                     }
                 }
             }
-            /* .fade-slide {
+            .area13 {
                 position: relative;
-                z-index: 0;
+                z-index: -1;
                 margin-top: -100vh;
-                background-color: #fff;
-                .sticky-wrap {
-                    position: sticky;
-                    top: 0;
-                }
-            } */
+            }
         }
     }
 }

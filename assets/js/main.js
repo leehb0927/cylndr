@@ -836,7 +836,7 @@ gsap.to(horiList, {
 
 //가로스크롤 구현
 const area12ScrollTween = gsap.to('.about-us .horizontal-area-wrap .area12', {
-    x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - (window.innerWidth * 0.05),
+    x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - (window.innerWidth * 0.1),
     scrollTrigger: {
         trigger: '.horizontal-area-wrap',
         start: '0% 30%',
@@ -940,5 +940,17 @@ setupCanvasAnimation({
         ...scrollTriggerConfig,
         start: '28% left',
         end: '65% left',
+    }
+})
+
+setupCanvasAnimation({
+    canvasSelector: '.area12 .object5',
+    imagePath: '/assets/image/area12/image_4',
+    totalFrames: 110,
+    loopCount: 2,
+    scrollTrigger: {
+        ...scrollTriggerConfig,
+        start: '43% left',
+        end: '80% left',
     }
 })

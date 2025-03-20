@@ -603,16 +603,6 @@ section.about-us .horizontal-area-wrap {
   z-index: 0;
   margin-top: -100vh;
   height: 1300vh;
-  /* .fade-slide {
-      position: relative;
-      z-index: 0;
-      margin-top: -100vh;
-      background-color: #fff;
-      .sticky-wrap {
-          position: sticky;
-          top: 0;
-      }
-  } */
 }
 section.about-us .horizontal-area-wrap .sticky-wrap {
   position: sticky;
@@ -626,6 +616,7 @@ section.about-us .horizontal-area-wrap .area12 {
   width: 706.5rem;
   background-color: #0f0;
   border-radius: 0 5rem 5rem 0;
+  overflow: hidden;
 }
 section.about-us .horizontal-area-wrap .area12 .page {
   position: relative;
@@ -824,4 +815,15 @@ section.about-us .horizontal-area-wrap .area12 .page.page3 .object4 {
   width: 85rem;
   bottom: 8%;
   left: -5rem;
+}
+section.about-us .horizontal-area-wrap .area12 .page.page3 .object5 {
+  z-index: 1;
+  width: 150rem;
+  bottom: -30%;
+  left: 180rem;
+}
+section.about-us .horizontal-area-wrap .area13 {
+  position: relative;
+  z-index: -1;
+  margin-top: -100vh;
 }
