@@ -840,9 +840,8 @@ const area12ScrollTween = gsap.to('.about-us .horizontal-area-wrap .area12', {
     scrollTrigger: {
         trigger: '.horizontal-area-wrap',
         start: '0% 30%',
-        end: '100% 100%',
         scrub: 1,
-        // markers: true
+        markers: true
     }
 })
 

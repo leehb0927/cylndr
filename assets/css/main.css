@@ -602,7 +602,7 @@ section.about-us .horizontal-area-wrap {
   position: relative;
   z-index: 0;
   margin-top: -100vh;
-  height: 1300vh;
+  height: 2500vh;
 }
 section.about-us .horizontal-area-wrap .sticky-wrap {
   position: sticky;
@@ -826,4 +826,33 @@ section.about-us .horizontal-area-wrap .area13 {
   position: relative;
   z-index: -1;
   margin-top: -100vh;
+  height: 100vh;
+}
+section.about-us .horizontal-area-wrap .area13 .video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+section.about-us .horizontal-area-wrap .area13 .video-wrap .contents video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.about-us .horizontal-area-wrap .area13 .video-wrap .contents.video2 {
+  opacity: 0;
+}
+section.about-us .horizontal-area-wrap .area13 .video-wrap .contents.video3 {
+  opacity: 0;
+}
+section.about-us .horizontal-area-wrap .area13 .video-wrap .contents.video4 {
+  opacity: 0;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
