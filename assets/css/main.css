@@ -835,6 +835,13 @@ section.about-us .horizontal-area-wrap .area13 .video-wrap {
   width: 100vw;
   height: 100vh;
 }
+section.about-us .horizontal-area-wrap .area13 .video-wrap .contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 section.about-us .horizontal-area-wrap .area13 .video-wrap .contents video {
   width: 100%;
   height: 100%;
@@ -855,4 +862,60 @@ section.about-us .horizontal-area-wrap .area13 .text-wrap {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents > div {
+  width: 100%;
+  text-align: center;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents > div .label {
+  display: block;
+  margin-bottom: 3rem;
+  font-family: "RhymesDisplay-Thin";
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 0.01em;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents > div h2 {
+  display: inline-block;
+  padding-left: 10rem;
+  font-family: "Selecta-Medium";
+  font-size: 22rem;
+  line-height: 22rem;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents > div .eng {
+  margin-bottom: 3rem;
+  margin-top: 6rem;
+  font-family: "RhymesDisplay-Thin";
+  font-size: 3.2rem;
+  line-height: 3.4rem;
+  letter-spacing: -0.01em;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents > div .ko {
+  font-family: "NotoSans";
+  font-size: 1.8rem;
+  line-height: 2rem;
+  letter-spacing: -0.03em;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents > div.top {
+  opacity: 0;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents > div.bottom {
+  opacity: 0;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents.text1 .top {
+  opacity: 1;
+}
+section.about-us .horizontal-area-wrap .area13 .text-wrap .contents.text1 .bottom {
+  opacity: 1;
 }

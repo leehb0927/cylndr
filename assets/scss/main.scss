@@ -870,6 +870,11 @@ section {
                     width: 100vw;
                     height: 100vh;
                     .contents {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
                         video {
                             width: 100%;
                             height: 100%;
@@ -892,6 +897,62 @@ section {
                     left: 0;
                     width: 100vw;
                     height: 100vh;
+                    .contents {
+                        @include flex-center;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        > div {
+                            width: 100%;
+                            text-align: center;
+                            .label {
+                                display: block;
+                                margin-bottom: 3rem;
+                                font-family: $font-rhy-thin;
+                                font-size: 4rem;
+                                line-height: 4rem;
+                                letter-spacing: .01em;
+                            }
+                            h2 {
+                                display: inline-block;
+                                padding-left: 10rem;
+                                font-family: $font-medium;
+                                font-size: 22rem;
+                                line-height: 22rem;
+                            }
+                            .eng {
+                                margin-bottom: 3rem;
+                                margin-top: 6rem;
+                                font-family: $font-rhy-thin;
+                                font-size: 3.2rem;
+                                line-height: 3.4rem;
+                                letter-spacing: -.01em;
+                            }
+                            .ko {
+                                font-family: $font-noto;
+                                font-size: 1.8rem;
+                                line-height: 2rem;
+                                letter-spacing: -.03em;
+                            }
+                            &.top {
+                                opacity: 0;
+                            }
+                            &.bottom {
+                                opacity: 0;
+                            }
+                        }
+                        &.text1 {
+                            .top {
+                                opacity: 1;
+                            }
+                            .bottom {
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
             }
         }

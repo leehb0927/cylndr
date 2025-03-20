@@ -27,6 +27,11 @@
   src: url("../fonts/RhymesDisplay-Thin.e540ded1.woff2");
   font-weight: 200;
 }
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/400NotoSansKR-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

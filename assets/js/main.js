@@ -39,6 +39,7 @@ gsap.ticker.lagSmoothing(0)
 
 
 
+
 /* header */
 // header nav 특정 위치에서 사라짐
 let navPin = gsap.timeline({
@@ -832,20 +833,31 @@ gsap.to(horiList, {
 
 
 
+
+/* .area12 가로 스크롤 이동 후 .area13 fadeIn/Out 슬라이드 */
 /* .about-us .area12 */
 
-//가로스크롤 구현
+// area12 가로스크롤 구현
 const area12ScrollTween = gsap.to('.about-us .horizontal-area-wrap .area12', {
-    x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - (window.innerWidth * 0.1),
+    // x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - (window.innerWidth * 0.1),
+    x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - 1600,
     scrollTrigger: {
         trigger: '.horizontal-area-wrap',
-        start: '0% 30%',
+        start: 'top 30%',
+        //end값이 있어야 onComplete가 실행된다.
+        // end: () => `+=${document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - (window.innerWidth * 0.1)}`,
+        // end: () => `+=${document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth}`,
         scrub: 1,
-        markers: true
+    },
+    onComplete: () => {
+        console.log('가로스크롤 이동 끝');
+
+        // startTimeline();
     }
 })
 
 
+//area12스크롤 맞춰 움직이는 canvas랜더
 const setupCanvasAnimation = ({ 
     canvasSelector, // 캔버스 선택자 
     imagePath,      // 이미지 경로 
@@ -882,13 +894,11 @@ const setupCanvasAnimation = ({
     });
 };
 
-
 const scrollTriggerConfig = {
     trigger: '.about-us .horizontal-area-wrap .area12',
     containerAnimation: area12ScrollTween,
     scrub: 1,
 };
-
 
 setupCanvasAnimation({
     canvasSelector: '.area12 .object1',
@@ -902,7 +912,7 @@ setupCanvasAnimation({
         // 속성들을 풀어서 객체에 복사해 준다.
 
         start: '4% left',
-        end: '13% left'
+        end: '13% left',
     }
 });
 
@@ -945,11 +955,21 @@ setupCanvasAnimation({
 setupCanvasAnimation({
     canvasSelector: '.area12 .object5',
     imagePath: '/assets/image/area12/image_4',
-    totalFrames: 110,
+    totalFrames: 100,
     loopCount: 2,
     scrollTrigger: {
         ...scrollTriggerConfig,
         start: '43% left',
         end: '80% left',
+    }
+})
+
+/* .about-us .area13 */
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.horizontal-area-wrap',
+        markers: true,
+        start: 'top top',
+        end: 'bottom bottom'
     }
 })
