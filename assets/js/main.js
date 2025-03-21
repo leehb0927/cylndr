@@ -27,7 +27,6 @@ gsap.ticker.lagSmoothing(0)
 /* let navPin = ScrollTrigger.create({
     trigger: '.header nav',
     pin: '.header nav',
-    markers: true
 }) */
 
 
@@ -48,7 +47,6 @@ let navPin = gsap.timeline({
         pin: '.nav-wrapper',
         start: '0% 0%',
         end: '100% 0',
-        // markers: true,
         //gsap onUpdate찾아보기
         onUpdate: (self) => {
             if (self.progress >= 1) {
@@ -432,7 +430,6 @@ const area6ImageTimeline = gsap.timeline({
         start: '60% bottom',
         end: '65% top',
         scrub: true,
-        // markers: true,
         onUpdate: (self) => {
             const progress = self.progress
             let moveDistance = 0;
@@ -464,7 +461,6 @@ const area6ImageTimeline = gsap.timeline({
     opacity: 1,
     scrollTrigger: {
         tirgger: '.about-us .area7 .text-en',
-        markers: true,
         start: 'bottom bottom',
         end: 'bottom top'
     }
@@ -536,7 +532,6 @@ ScrollTrigger.create({
     pin: '.about-us .area8 .wrap',
     start: 'top top',
     end: '+=3100', //start 위치에서 3100px만큼 스크롤이 진행되었을 때 end됨
-    // markers: true
 })
 
 /* gsap.timeline({
@@ -602,7 +597,6 @@ gsap.timeline({
         start: `${560 + window.innerHeight}px bottom`,
         end: `${900 + window.innerHeight}px bottom`,
         scrub: 1,
-        // markers: true
     }
 })
 .to('.about-us .area8 .contents-box .text-box .top-text.box1 .from p',
@@ -783,7 +777,6 @@ gsap.timeline({
         start: 'top top',
         end: `+=${horiWidthScrollArea-horiWidthScrollBlank} `,
         scrub: .3,
-        // markers: true
     }
 })
 .to('.about-us .horizontal-wrap .wrap .area10 .inner', {width: '100%',}, 0)
@@ -794,7 +787,6 @@ gsap.timeline({
         start: 'top top',
         end: `+=${(horiWidthScrollArea - horiWidthScrollBlank) * 0.5}`,
         scrub: .3,
-        // markers: true
     }
 })
 .to('.about-us .horizontal-wrap .wrap .area10 .inner .dark', {opacity: 1,}, 0)
@@ -805,7 +797,6 @@ gsap.timeline({
         start: `+=${(horiWidthScrollArea - horiWidthScrollBlank) * 0.5} top`,
         end: `+=${(horiWidthScrollArea - horiWidthScrollBlank)}`,
         scrub: .3,
-        // markers: true
     }
 })
 .to('.about-us .horizontal-wrap .wrap .area10 .inner .night', {opacity: 1,}, 0)
@@ -839,15 +830,21 @@ gsap.to(horiList, {
 
 // area12 가로스크롤 구현
 const area12ScrollTween = gsap.to('.about-us .horizontal-area-wrap .area12', {
-    // x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - (window.innerWidth * 0.1),
-    x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - 1600,
+    x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').offsetWidth - 10, //10px넣은건 .about-us .horizontal-area-wrap .area12가 rem으로 설정해둬 px이 소숫점으로 떨어져 완전히 스크롤이 넘어가지 않아 여유분
+    //이걸 자꾸 scrollWidth로 측정해놔서 뒤에 화사표 잘린 부분도 width 포함돼서 스크롤이 더 넘어간 걸로 보임
+    //넘치는 가로 크기 포함 _ scrollWidth / offsetWidth _ border 부분 포함
+    // x: () => -document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth + window.innerHeight + 1600,
+
+    //코딩은 정말 생각보다 더 세세하고 정확하고... 한 치의 오차도 없고ㅠㅠ봐 주는 거 없음 정말 정확해서 좋은데 너무 야박해...힘들어... 근데 정확해서 좋아 답은 늘 정해져있으니가
+
     scrollTrigger: {
         trigger: '.horizontal-area-wrap',
-        start: 'top 30%',
+        start: 'top top',
         //end값이 있어야 onComplete가 실행된다.
-        // end: () => `+=${document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth - (window.innerWidth * 0.1)}`,
-        // end: () => `+=${document.querySelector('.about-us .horizontal-area-wrap .area12').scrollWidth}`,
+        end: () => `+=${document.querySelector('.about-us .horizontal-area-wrap .area12').offsetWidth + window.innerWidth * 3}`,
+        // end: () => `+=${document.querySelector('.about-us .horizontal-area-wrap .area12').offsetWidth}`,
         scrub: 1,
+        // markers: true
     },
     onComplete: () => {
         console.log('가로스크롤 이동 끝');
@@ -960,16 +957,48 @@ setupCanvasAnimation({
     scrollTrigger: {
         ...scrollTriggerConfig,
         start: '43% left',
-        end: '80% left',
+        end: '100% left',
     }
 })
+
+//.area13이 시작되는 지점은 전체 높이에서 start지점 
+
+//.horizontal-area-wrap의 전체 높이
+const horiAreaWrapHeight = document.querySelector('.about-us .horizontal-area-wrap').clientHeight;
+
+//.area13이 시작하는 지점 = .area12 가로스크롤이 모두 끝나는 지점
+const area13StartPoint = document.querySelector('.about-us .horizontal-area-wrap .area12').offsetWidth + window.innerWidth * 3;
+console.log(area13StartPoint)
+
+
+//전체에서 .area12스크롤 끝나는 지점을 빼면 .area13 스크롤트리거가 진행될 높이가 나옴
+const area13ScrollHeight = horiAreaWrapHeight - area13StartPoint
+
+//배경화면은 총 4개이므로 .area13ScrollHeight를 4로 나눠 각각 영역에 스크롤 트리거 적용ㄱ 가능
+const area13ScrollActionArea = area13ScrollHeight / 4
+
 
 /* .about-us .area13 */
 gsap.timeline({
     scrollTrigger: {
         trigger: '.horizontal-area-wrap',
-        markers: true,
-        start: 'top top',
-        end: 'bottom bottom'
+        start: () => `+=${area13StartPoint}`,
+        //area12 가로스크롤이 끝난 후 시작
+        end: () => `+=${area13ScrollActionArea}`,
+        scrub: 1,
+        markers: true
+    }
+})
+.to('.area13 .video-wrap .video1', {opacity: 0, delay: .1}, 0)
+.to('.area13 .text-wrap .text1', {opacity: 0, delay: .1}, 0)
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.horizontal-area-wrap',
+        start: () => `+=${area13ScrollActionArea}`,
+        //area12 가로스크롤이 끝난 후 시작
+        // end: () => `+=${area13ScrollActionArea}`,
+        scrub: 1,
+        markers: true
     }
 })
