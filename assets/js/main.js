@@ -961,24 +961,41 @@ setupCanvasAnimation({
     }
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* area13 스크롤 내리면 fade in/ out 내가 쓴 코드 */
 //.area13이 시작되는 지점은 전체 높이에서 start지점 
 
 //.horizontal-area-wrap의 전체 높이
-const horiAreaWrapHeight = document.querySelector('.about-us .horizontal-area-wrap').clientHeight;
+/* const horiAreaWrapHeight = document.querySelector('.about-us .horizontal-area-wrap').clientHeight;
 
 //.area13이 시작하는 지점 = .area12 가로스크롤이 모두 끝나는 지점
 const area13StartPoint = document.querySelector('.about-us .horizontal-area-wrap .area12').offsetWidth + window.innerWidth * 3;
-console.log(area13StartPoint)
-
 
 //전체에서 .area12스크롤 끝나는 지점을 빼면 .area13 스크롤트리거가 진행될 높이가 나옴
 const area13ScrollHeight = horiAreaWrapHeight - area13StartPoint
 
 //배경화면은 총 4개이므로 .area13ScrollHeight를 4로 나눠 각각 영역에 스크롤 트리거 적용ㄱ 가능
-const area13ScrollActionArea = area13ScrollHeight / 4
+const area13ScrollActionArea = area13ScrollHeight / 7
 
-
-/* .about-us .area13 */
+// .about-us .area13
 gsap.timeline({
     scrollTrigger: {
         trigger: '.horizontal-area-wrap',
@@ -986,19 +1003,193 @@ gsap.timeline({
         //area12 가로스크롤이 끝난 후 시작
         end: () => `+=${area13ScrollActionArea}`,
         scrub: 1,
-        markers: true
     }
 })
 .to('.area13 .video-wrap .video1', {opacity: 0, delay: .1}, 0)
 .to('.area13 .text-wrap .text1', {opacity: 0, delay: .1}, 0)
+.to('.area13 .text-wrap .text2 .top', {opacity: 0, immediateRender: false}, 0)
+.to('.area13 .text-wrap .text2 .bottom', {opacity: 0, immediateRender: false}, 0)
+.to('.area13 .video-wrap .video2', {opacity: 0, immediateRender: false}, 0);
 
 gsap.timeline({
     scrollTrigger: {
         trigger: '.horizontal-area-wrap',
-        start: () => `+=${area13ScrollActionArea}`,
+        start: () => `+=${area13StartPoint + area13ScrollActionArea}`,
         //area12 가로스크롤이 끝난 후 시작
-        // end: () => `+=${area13ScrollActionArea}`,
+        end: () => `+=${area13ScrollActionArea}`,
         scrub: 1,
-        markers: true
     }
 })
+.to('.area13 .text-wrap .text2 .top', {opacity: 1},.03)
+.to('.area13 .text-wrap .text2 .bottom', {opacity: 1},.05)
+.to('.area13 .video-wrap .video2', {opacity: 1},.08)
+
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.horizontal-area-wrap',
+        start: () => `+=${area13StartPoint + (area13ScrollActionArea * 2)}`,
+        //area12 가로스크롤이 끝난 후 시작
+        end: () => `+=${area13ScrollActionArea}`,
+        scrub: 1,
+    }
+})
+.to('.area13 .text-wrap .text2 .top', {opacity: 0},0)
+.to('.area13 .text-wrap .text2 .bottom', {opacity: 0},0)
+.to('.area13 .video-wrap .video2', {opacity: 0}, 0)
+.to('.area13 .text-wrap .text3 .top', {opacity: 0, immediateRender: false}, 0)
+.to('.area13 .text-wrap .text3 .bottom', {opacity: 0, immediateRender: false}, 0)
+.to('.area13 .video-wrap .video3', {opacity: 0, immediateRender: false}, 0);
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.horizontal-area-wrap',
+        start: () => `+=${area13StartPoint + (area13ScrollActionArea * 3)}`,
+        //area12 가로스크롤이 끝난 후 시작
+        end: () => `+=${area13ScrollActionArea}`,
+        scrub: 1,
+    }
+})
+.to('.area13 .text-wrap .text3 .top', {opacity: 1},.03)
+.to('.area13 .text-wrap .text3 .bottom', {opacity: 1},.05)
+.to('.area13 .video-wrap .video3', {opacity: 1},.08)
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.horizontal-area-wrap',
+        start: () => `+=${area13StartPoint + (area13ScrollActionArea * 4)}`,
+        //area12 가로스크롤이 끝난 후 시작
+        end: () => `+=${area13ScrollActionArea}`,
+        scrub: 1,
+    }
+})
+.to('.area13 .text-wrap .text3 .top', {opacity: 0},0)
+.to('.area13 .text-wrap .text3 .bottom', {opacity: 0},0)
+.to('.area13 .video-wrap .video3', {opacity: 0}, 0)
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.horizontal-area-wrap',
+        start: () => `+=${area13StartPoint + (area13ScrollActionArea * 5)}`,
+        //area12 가로스크롤이 끝난 후 시작
+        end: () => `+=${area13ScrollActionArea}`,
+        scrub: 1,
+    }
+})
+.to('.area13 .text-wrap .text4 .top', {opacity: 1},.03)
+.to('.area13 .text-wrap .text4 .bottom', {opacity: 1},.05)
+.to('.area13 .video-wrap .video4', {opacity: 1},.08) */
+
+
+
+
+
+/* area13 fade in/out 리팩토링 코드 */
+
+
+// GSAP 애니메이션 적용
+/* animations.forEach(({ start, actions }) => {
+    const timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.horizontal-area-wrap',
+            start: () => `+=${area13StartPoint + start}`,
+            end: () => `+=${area13ScrollActionArea}`,
+            scrub: 1,
+            markers: true
+        }
+    });
+
+    actions.forEach(([target, properties, delay = 0]) => {
+        timeline.to(target, properties, delay);
+    });
+}); */
+
+
+/* .area13 리팩토링 코드 함수 안에 넣어서 관리하기 */
+
+function area13Animation() {
+    //변수 선언
+    //전체 스크롤 높이 area12, 13을 포함한 영역의 높이
+    const horiAreaWrapHeight = document.querySelector('.about-us .horizontal-area-wrap').clientHeight;
+    //area12 가로스크롤이 끝나는 지점 or area13 스크롤 애니메이션이 시작하는 지점
+    const area13StartPoint = document.querySelector('.about-us .horizontal-area-wrap .area12').offsetWidth + window.innerWidth * 3;
+    //area13애니메이션이 진행될 영역의 높이
+    const area13ScrollHeight = horiAreaWrapHeight - area13StartPoint;
+    //area13의 스크롤 트리거 구간 나눔
+    const area13ScrollActionArea = area13ScrollHeight / 7;
+
+    //애니메이션 속성값들 배열
+    const animationSets = [
+        {
+            start: 0,
+            actions: [
+                ['.area13 .video-wrap .video1', { opacity: 0, delay: 0.1 }],
+                ['.area13 .text-wrap .text1', { opacity: 0, delay: 0.1 }],
+                ['.area13 .text-wrap .text2 .top', { opacity: 0, immediateRender: false }],
+                ['.area13 .text-wrap .text2 .bottom', { opacity: 0, immediateRender: false }],
+                ['.area13 .video-wrap .video2', { opacity: 0, immediateRender: false }]
+            ]
+        },
+        {
+            start: area13ScrollActionArea,
+            actions: [
+                ['.area13 .text-wrap .text2 .top', { opacity: 1 }, 0.03],
+                ['.area13 .text-wrap .text2 .bottom', { opacity: 1 }, 0.05],
+                ['.area13 .video-wrap .video2', { opacity: 1 }, 0.08]
+            ]
+        },
+        {
+            start: area13ScrollActionArea * 2,
+            actions: [
+                ['.area13 .text-wrap .text2 .top', { opacity: 0 }],
+                ['.area13 .text-wrap .text2 .bottom', { opacity: 0 }],
+                ['.area13 .video-wrap .video2', { opacity: 0 }],
+                ['.area13 .text-wrap .text3 .top', { opacity: 0, immediateRender: false }],
+                ['.area13 .text-wrap .text3 .bottom', { opacity: 0, immediateRender: false }],
+                ['.area13 .video-wrap .video3', { opacity: 0, immediateRender: false }]
+            ]
+        },
+        {
+            start: area13ScrollActionArea * 3,
+            actions: [
+                ['.area13 .text-wrap .text3 .top', { opacity: 1 }, 0.03],
+                ['.area13 .text-wrap .text3 .bottom', { opacity: 1 }, 0.05],
+                ['.area13 .video-wrap .video3', { opacity: 1 }, 0.08]
+            ]
+        },
+        {
+            start: area13ScrollActionArea * 4,
+            actions: [
+                ['.area13 .text-wrap .text3 .top', { opacity: 0 }],
+                ['.area13 .text-wrap .text3 .bottom', { opacity: 0 }],
+                ['.area13 .video-wrap .video3', { opacity: 0 }]
+            ]
+        },
+        {
+            start: area13ScrollActionArea * 5,
+            actions: [
+                ['.area13 .text-wrap .text4 .top', { opacity: 1 }, 0.03],
+                ['.area13 .text-wrap .text4 .bottom', { opacity: 1 }, 0.05],
+                ['.area13 .video-wrap .video4', { opacity: 1 }, 0.08]
+            ]
+        }
+    ]
+
+
+    animationSets.forEach(({start, actions}) => {
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.horizontal-area-wrap',
+                start: () => `+=${area13StartPoint + start}`,
+                end: () => `+=${area13ScrollActionArea}`,
+                scrub: 1
+            }
+        })
+
+        actions.forEach(([target, properties, delay = 0]) => {
+            timeline.to(target, properties, delay);
+        })
+    })
+}
+
+area13Animation()
