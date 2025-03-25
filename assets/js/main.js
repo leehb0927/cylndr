@@ -1191,5 +1191,34 @@ function area13Animation() {
         })
     })
 }
-
 area13Animation()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .are14 이미지 리스트 pin */
+ScrollTrigger.create({
+    trigger: '.area14 .pin-wrap .inner',
+    pin: '.area14 .pin-wrap .inner',
+    // start: 'top top', //기본값
+    // end: 'bottom top', //기본값
+    onUpdate: (self) => {
+        const frameIndex = Math.round(self.progress * 42) + 1;
+        document.querySelector('.area14 .pin-wrap .img-wrap img').src = `/assets/image/area14/area14_${frameIndex}.jpg`;
+    }
+})
