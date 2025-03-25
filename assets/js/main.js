@@ -1219,6 +1219,9 @@ ScrollTrigger.create({
     // end: 'bottom top', //기본값
     onUpdate: (self) => {
         const frameIndex = Math.round(self.progress * 42) + 1;
+        //index는 0 부터 시작이라 +1을 해주어야 1.jpg부터 시작한다.
+        //총 43개의 이미지
+
         document.querySelector('.area14 .pin-wrap .img-wrap img').src = `/assets/image/area14/area14_${frameIndex}.jpg`;
     }
 })
