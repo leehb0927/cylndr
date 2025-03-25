@@ -899,7 +899,7 @@ const scrollTriggerConfig = {
 
 setupCanvasAnimation({
     canvasSelector: '.area12 .object1',
-    imagePath: '/assets/image/area12/image_4',
+    imagePath: './assets/image/area12/image_4',
     totalFrames: 100,
     loopCount: 2,
     scrollTrigger: {
@@ -915,7 +915,7 @@ setupCanvasAnimation({
 
 setupCanvasAnimation({
     canvasSelector: '.area12 .object2',
-    imagePath: '/assets/image/area12/image_1',
+    imagePath: './assets/image/area12/image_1',
     totalFrames: 49,
     loopCount: 3,
     scrollTrigger: {
@@ -927,7 +927,7 @@ setupCanvasAnimation({
 
 setupCanvasAnimation({
     canvasSelector: '.area12 .object3',
-    imagePath: '/assets/image/area12/image_2',
+    imagePath: './assets/image/area12/image_2',
     totalFrames: 100,
     loopCount: 2,
     scrollTrigger: {
@@ -939,7 +939,7 @@ setupCanvasAnimation({
 
 setupCanvasAnimation({
     canvasSelector: '.area12 .object4',
-    imagePath: '/assets/image/area12/image_3',
+    imagePath: './assets/image/area12/image_3',
     totalFrames: 110,
     loopCount: 2,
     scrollTrigger: {
@@ -951,7 +951,7 @@ setupCanvasAnimation({
 
 setupCanvasAnimation({
     canvasSelector: '.area12 .object5',
-    imagePath: '/assets/image/area12/image_4',
+    imagePath: './assets/image/area12/image_4',
     totalFrames: 100,
     loopCount: 2,
     scrollTrigger: {
