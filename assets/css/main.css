@@ -51,11 +51,17 @@ section.about-us .area2 .portfolio-inner .cards li .img img {
   height: 100%;
   object-fit: cover;
 }
+section.about-us .area2 .portfolio-inner .show-text-wrap .front-dot p:nth-child(1) {
+  margin-left: 18rem;
+}
 section.about-us .area3 {
   margin-bottom: 12rem;
 }
 section.about-us .area3 .show-text-wrap {
   padding-left: 49.27%;
+}
+section.about-us .area3 .show-text-wrap .front-dot p:nth-child(1) {
+  margin-left: 16rem;
 }
 section.about-us .area3 .text-ko-wrap {
   padding-left: 49.27%;
@@ -281,6 +287,9 @@ section.about-us .area6 .box-text {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+}
+section.about-us .area6 .box-text .show-text-wrap .front-dot p:nth-child(1) {
+  margin-left: 16rem;
 }
 section.about-us .area6 .box-text .text-ko-wrap {
   padding-left: 49.27%;
@@ -587,6 +596,9 @@ section.about-us .horizontal-wrap .area11 .text-box {
 section.about-us .horizontal-wrap .area11 .text-box .show-text-wrap {
   padding-left: 2.86%;
   width: 100%;
+}
+section.about-us .horizontal-wrap .area11 .text-box .show-text-wrap .front-dot p:nth-child(1) {
+  margin-left: 10rem;
 }
 section.about-us .horizontal-wrap .area11 .text-box .show-text-wrap .line .units {
   transform: translateY(0);
@@ -948,6 +960,24 @@ section.about-us .area14 .text-bottom {
   transform: translateX(-50%);
   font-family: "RhymesDisplay-Thin";
   font-size: 55rem;
+  z-index: 1;
+}
+section.about-us .area14 .text-deco {
+  position: absolute;
+  bottom: 1.8rem;
+  width: 111rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section.about-us .area14 .text-deco > span {
+  display: flex;
+  justify-content: space-between;
+}
+section.about-us .area14 .text-deco span {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: -0.02em;
+  color: #555;
 }
 section.about-us .area14 .pin-wrap {
   position: absolute;
@@ -973,4 +1003,35 @@ section.about-us .area14 .pin-wrap .img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+section.about-us .area15 {
+  margin-top: 30rem;
+  margin-bottom: 54rem;
+}
+section.about-us .area15 .show-text-wrap {
+  padding-left: 39.58%;
+}
+section.about-us .area15 .text-ko-wrap {
+  padding-left: 48.43%;
+}
+section.about-us .area16 .wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+section.about-us .area16 .header {
+  position: relative;
+  font-family: "RhymesDisplay-Thin";
+  font-size: 18rem;
+  line-height: 16rem;
+}
+section.about-us .area16 .header.text1 {
+  left: 50%;
+  margin: 0 0 140rem -78rem;
+}
+section.about-us .area16 .header.text2 {
+  text-align: right;
+  margin: 0 0 92rem 78rem;
+  right: 50%;
 }

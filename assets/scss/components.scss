@@ -124,6 +124,23 @@
     padding-left: 17.7%;
     .line {
         overflow: hidden;
+        &.front-dot {
+            display: flex;
+            transform: translateX(-2.2em);
+            p:nth-child(1) {
+                display: flex;
+                align-items: center;
+                &::before {
+                    @include vs-ib;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    top: 0.4em;
+                    margin-right: .7em;
+                    border-radius: 100%;
+                    background: $color-green;
+                }
+            }
+        }
         .units {
             display: inline-block;
             font-family: $font-medium;
@@ -131,6 +148,13 @@
             line-height: 6.2rem;
             letter-spacing: -.01em;
             transform: translateY(100%);
+        }
+    }
+    &.inactive {
+        .line {
+            .units {
+                transform: none;
+            }
         }
     }
 }
@@ -144,5 +168,11 @@
         letter-spacing: -.03em;
         transform: translateY(100%);
         opacity: 0;
+    }
+    &.inactive {
+        p {
+            transform: none;
+            opacity: 1;
+        }
     }
 }
