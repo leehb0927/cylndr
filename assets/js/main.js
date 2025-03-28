@@ -1247,6 +1247,9 @@ ScrollTrigger.create({
 
 
 
+
+
+
 /* .area16 */
 const showTextList5 = document.querySelectorAll('.main .about-us .area16 .line .units');
 showTextAnimation(showTextList5, '.main .about-us .area16 .show-text-wrap', '50% bottom');

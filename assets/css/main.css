@@ -1105,3 +1105,35 @@ section.about-us .area16 .img-box.box4 {
   right: 50%;
   margin-right: 42.1rem;
 }
+section.work {
+  height: 400vh;
+}
+section.work .sticky-wrap {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100%;
+}
+section.work .sticky-wrap .work-content, section.work .sticky-wrap .title-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section.work .sticky-wrap .work-content {
+  transform: translateY(100%);
+}
+section.work .sticky-wrap .bg-wrap {
+  width: 100%;
+  height: 100%;
+}
+section.work .sticky-wrap .bg-wrap img {
+  width: 100%;
+  height: 100%;
+}
+section.work .sticky-wrap .title-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
