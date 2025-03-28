@@ -136,6 +136,35 @@ function showSubTextAnimation(elements, trigger, options = {}) {
     })
 }
 
+//공통 기능을 함수로 추출한 것을 적용
+// .area1
+const showTextList = document.querySelectorAll('.main .about-us .area1 .line .units');
+showTextAnimation(showTextList, '.main .area1', 'top bottom')
+showSubTextAnimation('.main .about-us .area1 .text-ko-wrap p', '.main .area1');
+
+// .area2
+const showTextList2 = document.querySelectorAll('.main .about-us .area2 .line .units');
+showTextAnimation(showTextList2, '.main .area2', '70% bottom');
+showSubTextAnimation('.main .about-us .area2 .text-ko-wrap p', '.main .area2');
+
+// .area3
+const showTextList3 = document.querySelectorAll('.main .about-us .area3 .line .units');
+showTextAnimation(showTextList3, '.main .area3','70% bottom');
+showSubTextAnimation('.main .about-us .area3 .text-ko-wrap p', '.main .area3', {
+    start : '150% bottom',
+    end : '150% bottom',
+});
+
+// .area6
+const showTextList4 = document.querySelectorAll('.main .about-us .area6 .line .units');
+showTextAnimation(showTextList4, '.main .area6', '50% bottom')
+showSubTextAnimation('.main .area6 .text-ko-wrap p', '.main .area6', {
+    start: '75% bottom',
+})
+
+
+
+
 
 
 
@@ -163,10 +192,7 @@ function showSubTextAnimation(elements, trigger, options = {}) {
     index _ 반복문에서 현재 요소의 인덱스
     */
 
-//공통 기능을 함수로 추출한 것을 적용
-const showTextList = document.querySelectorAll('.main .about-us .area1 .line .units');
-showTextAnimation(showTextList, '.main .area1', 'top bottom')
-showSubTextAnimation('.main .about-us .area1 .text-ko-wrap p', '.main .area1');
+
 
 // 따로 적용할 경우 아래 코드를 길게 중복해서 적어야한다.
 /* showTextList.forEach((element, index) => {
@@ -201,10 +227,6 @@ showSubTextAnimation('.main .about-us .area1 .text-ko-wrap p', '.main .area1');
 
 
 /* .about-us .area2 */
-//텍스트 나타나는 애니메이션
-const showTextList2 = document.querySelectorAll('.main .about-us .area2 .line .units');
-showTextAnimation(showTextList2, '.main .area2', '70% bottom');
-showSubTextAnimation('.main .about-us .area2 .text-ko-wrap p', '.main .area2');
 
 //카드 리스트가 스크롤에 맞춰 오른쪽에서 왼쪽으로 이동 & 센터에 위치한 카드는 opacity:1
 //(ul전체길이 + li/2) - window/2 = 이 값을 .cards-wrap 에 transform: translateX(이값)
@@ -275,15 +297,6 @@ gsap.utils.toArray('.main .about-us .area2 li .img').forEach(function(list) {
 
 
 
-
-/* .about-us .area3 */
-const showTextList3 = document.querySelectorAll('.main .about-us .area3 .line .units');
-//텍스트 나타나는 애니메이션
-showTextAnimation(showTextList3, '.main .area3','70% bottom');
-showSubTextAnimation('.main .about-us .area3 .text-ko-wrap p', '.main .area3', {
-    start : '150% bottom',
-    end : '150% bottom',
-});
 
 
 
@@ -403,11 +416,6 @@ gsap.to('.main .about-us .area5 .bg-image', {
 
 
 /* .about-us .area6 */
-const showTextList4 = document.querySelectorAll('.main .about-us .area6 .line .units');
-showTextAnimation(showTextList4, '.main .area6', '50% bottom')
-showSubTextAnimation('.main .area6 .text-ko-wrap p', '.main .area6', {
-    start: '75% bottom',
-})
 
 /* 스크롤 내리면 이미지 변경 */
 //스크롤 거리에 맞춰서 .main .about-us .area6 .bg-img-list의 전체길이를 .main .about-us .area6 .bg-img-list li 길이만큼 n번 움직여서 이미지를 바꾼다.
@@ -1225,3 +1233,38 @@ ScrollTrigger.create({
         document.querySelector('.area14 .pin-wrap .img-wrap img').src = `./assets/image/area14/area14_${frameIndex}.jpg`;
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .area16 */
+const showTextList5 = document.querySelectorAll('.main .about-us .area16 .line .units');
+showTextAnimation(showTextList5, '.main .about-us .area16 .show-text-wrap', '50% bottom');
+showSubTextAnimation('.main .about-us .area16 .text-ko-wrap p', '.main .about-us .area16 .text-ko-wrap')
+
+//이미지 transform
+function scrollImgUp(element, yPercent, markers = false) {
+    gsap.to(element, {
+        scrollTrigger: {
+            trigger: element,
+            start: 'top bottom',
+            scrub: 1,
+            markers: markers
+        },
+        y: yPercent
+    })
+}
+scrollImgUp('.area16 .img-box.box1', '-40%')
+scrollImgUp('.area16 .img-box.box2', '-36%')
+scrollImgUp('.area16 .img-box.box3', '-64%')
+scrollImgUp('.area16 .img-box.box4', '-32%')

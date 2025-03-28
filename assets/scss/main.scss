@@ -1060,19 +1060,25 @@ section {
             margin-bottom: 54rem;
             .show-text-wrap {
                 padding-left: 39.58%;
+                .front-dot {
+                    p:nth-child(1) {
+                        margin-left: 17rem;
+                    }
+                }
             }
             .text-ko-wrap {
                 padding-left: 48.43%;
             }
         }
         .area16 {
+            margin-bottom: 27rem;
             .wrap {
                 position: relative;
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
             }
-            .header {
+            .header-text {
                 position: relative;
                 font-family: $font-rhy-thin;
                 font-size: 18rem;
@@ -1083,8 +1089,77 @@ section {
                 }
                 &.text2 {
                     text-align: right;
-                    margin: 0 0 92rem 78rem;
+                    margin: 0 -78rem 92rem 0;
                     right: 50%;
+                }
+            }
+            .show-text-wrap {
+                padding-left: 39.58%;
+                .front-dot {
+                    p:nth-child(1) {
+                        margin-left: 19rem;
+                    }
+                }
+            }
+            .text-ko-wrap {
+                padding-left: 48.43%;
+            }
+            .text-box {
+                position: absolute;
+                width: 44rem;
+                top: 134rem;
+                left: 50%;
+                margin-left: -69rem;
+                p {
+                    font-family: $font-light;
+                    font-size: 2.4rem;
+                    line-height: 2.8rem;
+                    letter-spacing: -.01em;
+                }
+            }
+            .img-box {
+                position: absolute;
+                top: 0;
+                .img-wrap {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                span {
+                    display: block;
+                    margin-top: 1.4rem;
+                    text-align: right;
+                    font-family: $font-light;
+                    font-size: 1.2rem;
+                    line-height: 1.5rem;
+                    letter-spacing: -.02em;
+                }
+                &.box1 {
+                    width: 79rem;
+                    top: 55rem;
+                    right: 50%;
+                    margin-right: -10rem;
+                    .img-wrap {}
+                }
+                &.box2 {
+                    width: 38.4rem;
+                    top: 116rem;
+                    left: 50%;
+                    margin-left: 39.6rem;
+                }
+                &.box3 {
+                    width: 89.2rem;
+                    top: 235rem;
+                    left: 50%;
+                    margin-left: -19.2rem;
+                }
+                &.box4 {
+                    width: 34.5rem;
+                    top: 270rem;
+                    right: 50%;
+                    margin-right: 42.1rem;
                 }
             }
         }

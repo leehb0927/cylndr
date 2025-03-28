@@ -1011,8 +1011,14 @@ section.about-us .area15 {
 section.about-us .area15 .show-text-wrap {
   padding-left: 39.58%;
 }
+section.about-us .area15 .show-text-wrap .front-dot p:nth-child(1) {
+  margin-left: 17rem;
+}
 section.about-us .area15 .text-ko-wrap {
   padding-left: 48.43%;
+}
+section.about-us .area16 {
+  margin-bottom: 27rem;
 }
 section.about-us .area16 .wrap {
   position: relative;
@@ -1020,18 +1026,82 @@ section.about-us .area16 .wrap {
   height: 100%;
   overflow: hidden;
 }
-section.about-us .area16 .header {
+section.about-us .area16 .header-text {
   position: relative;
   font-family: "RhymesDisplay-Thin";
   font-size: 18rem;
   line-height: 16rem;
 }
-section.about-us .area16 .header.text1 {
+section.about-us .area16 .header-text.text1 {
   left: 50%;
   margin: 0 0 140rem -78rem;
 }
-section.about-us .area16 .header.text2 {
+section.about-us .area16 .header-text.text2 {
   text-align: right;
-  margin: 0 0 92rem 78rem;
+  margin: 0 -78rem 92rem 0;
   right: 50%;
+}
+section.about-us .area16 .show-text-wrap {
+  padding-left: 39.58%;
+}
+section.about-us .area16 .show-text-wrap .front-dot p:nth-child(1) {
+  margin-left: 19rem;
+}
+section.about-us .area16 .text-ko-wrap {
+  padding-left: 48.43%;
+}
+section.about-us .area16 .text-box {
+  position: absolute;
+  width: 44rem;
+  top: 134rem;
+  left: 50%;
+  margin-left: -69rem;
+}
+section.about-us .area16 .text-box p {
+  font-family: "Selecta-Light";
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.01em;
+}
+section.about-us .area16 .img-box {
+  position: absolute;
+  top: 0;
+}
+section.about-us .area16 .img-box .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.about-us .area16 .img-box span {
+  display: block;
+  margin-top: 1.4rem;
+  text-align: right;
+  font-family: "Selecta-Light";
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.02em;
+}
+section.about-us .area16 .img-box.box1 {
+  width: 79rem;
+  top: 55rem;
+  right: 50%;
+  margin-right: -10rem;
+}
+section.about-us .area16 .img-box.box2 {
+  width: 38.4rem;
+  top: 116rem;
+  left: 50%;
+  margin-left: 39.6rem;
+}
+section.about-us .area16 .img-box.box3 {
+  width: 89.2rem;
+  top: 235rem;
+  left: 50%;
+  margin-left: -19.2rem;
+}
+section.about-us .area16 .img-box.box4 {
+  width: 34.5rem;
+  top: 270rem;
+  right: 50%;
+  margin-right: 42.1rem;
 }
