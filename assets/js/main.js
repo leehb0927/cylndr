@@ -1271,3 +1271,84 @@ scrollImgUp('.area16 .img-box.box1', '-40%')
 scrollImgUp('.area16 .img-box.box2', '-36%')
 scrollImgUp('.area16 .img-box.box3', '-64%')
 scrollImgUp('.area16 .img-box.box4', '-32%')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* work */
+/* gsap.timeline({
+    scrollTrigger: {
+        trigger: '.main .work',
+        start: 'top top',
+        end: '+=400vh',
+        scrub: 1
+    }
+})
+.to('.main .work .work-list .work-content.work1', {y: 0})
+.to('.main .work .work-list .work-content.work1 .bg-wrap', {scale: 1.06})
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.main .work',
+        start: 'top+=800vh top',
+        end: '+=400vh',
+        scrub: 1
+    }
+})
+.to('.main .work .work-list .work-content.work2', {y: 0})
+.to('.main .work .work-list .work-content.work2 .bg-wrap', {scale: 1.06})
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.main .work',
+        start: 'top+=1400vh top',
+        end: '+=400vh',
+        scrub: 1
+    }
+})
+.to('.main .work .work-list .work-content.work3', {y: 0})
+.to('.main .work .work-list .work-content.work3 .bg-wrap', {scale: 1.06})
+
+ */
+function workSectionAnimation() {
+    const animationValue = [
+        {element: 'work1', startValue: 0},
+        {element: 'work2', startValue: 800},
+        {element: 'work3', startValue: 1400}
+    ]
+
+    animationValue.forEach(({element, startValue}) => {
+        const workSlide =  `.main .work .work-list .work-content.${element}`;
+        const workSlideBg = `${workSlide} .bg-wrap`;
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: '.main .work',
+                start: `top+=${startValue}vh top`,
+                end: '+=400vh',
+                scrub: 1
+            }
+        })
+        .to(workSlide, {y: 0})
+        .to(workSlideBg, {scale: 1.06})
+    })
+}
+
+workSectionAnimation()
