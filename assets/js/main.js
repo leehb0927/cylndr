@@ -1327,6 +1327,8 @@ gsap.timeline({
 .to('.main .work .work-list .work-content.work3 .bg-wrap', {scale: 1.06})
 
  */
+
+//work 코드 공통으로 묶어 관리
 function workSectionAnimation() {
     const animationValue = [
         {element: 'work1', startValue: 0},
@@ -1352,3 +1354,35 @@ function workSectionAnimation() {
 }
 
 workSectionAnimation()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* recruit */
+
+//recruit title 애니메이션
+const recruitTitle = '.main .recruit .title-wrap .title';
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: '.main .recruit .recruit-wrap .title-wrap',
+        start: 'top bottom',
+        end: '150% bottom',
+        scrub: 1,
+    }
+})
+.to(`${recruitTitle} .card-wrapper`, {y: 0, opacity: 1})
+.to(`${recruitTitle} .card-wrapper`, {rotate: 15})
+.to(`${recruitTitle} h2 p:nth-child(1)`, {opacity: 1}, "<") //"<"를 넣으면 이전 동작과 동시 실행이 가능하다
+.to(`${recruitTitle} h2 p:nth-child(2)`, {opacity: 1})

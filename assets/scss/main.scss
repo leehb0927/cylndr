@@ -1167,6 +1167,7 @@ section {
 
     &.work {
         height: 400vh;
+        margin-bottom: 36rem;
         .sticky-wrap {
             position: sticky;
             top: 0;
@@ -1230,6 +1231,123 @@ section {
                     font-size: 3.6rem;
                     line-height: 3.6rem;
                     letter-spacing: -.02em;
+                }
+            }
+        }
+    }
+
+    &.recruit {
+        padding: 30rem 0 35rem;
+        .recruit-wrap {
+            width: 100%;
+            .title-wrap {
+                position: relative;
+                width: 121rem;
+                margin: 0 auto 19rem;
+                padding-bottom: 6rem;
+                .title {
+                    position: relative;
+                    h2 {
+                        p {
+                            position: relative;
+                            letter-spacing: -.03em;
+                            font-family: $font-rhy-thin;
+                            font-size: 16rem;
+                            line-height: 21rem;
+                            &:nth-child(1) {
+                                text-align: left;
+                                z-index: 1;
+                                opacity: 0;
+                            }
+                            &:nth-child(2) {
+                                text-align: right;
+                                z-index: 3;
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    .card-wrapper {
+                        position: absolute;
+                        width: 38.8rem;
+                        top: -5rem;
+                        left: 50%;
+                        transform: translate(-50%, 100%);
+                        transform-style: preserve-3d;
+                        opacity: 0;
+                        z-index: 2;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .deco-text {
+                    position: absolute;
+                    top: 15rem;
+                    left: 2rem;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                    letter-spacing: -.01em;
+                    color: $color-gray;
+                }
+                .mail {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 1.8rem;
+                    letter-spacing: -.02em;
+                }
+            }
+            .list-wrap {
+                width: 100%;
+                max-width: 132rem;
+                margin: 0 auto;
+                .recurit-list {
+                    border-top: 1px solid $color-gray;
+                    li {
+                        &:hover {
+                            .line {
+                                background-position: 0 0;
+                            }
+                        }
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 7rem 0;
+                            &::after {
+                                @include vs-ib;
+                                width: 3.6rem;
+                                height: 3.6rem;
+                                padding-right: 2.2rem;
+                                background-image: url('../image/recruit_arrow.svg');
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                            }
+                        }
+                        h3 {
+                            padding-left: 2rem;
+                            font-family: $font-medium;
+                            font-size: 5.6rem;
+                            letter-spacing: -.01em;
+                        }
+                        .line {
+                            width: 100%;
+                            height: 1px;
+                            background: linear-gradient(90deg, #fff 50%, #555 50%) 100% 0 / 200% 100%;
+                            transition: all .5s ease-in-out;
+                        }
+                    }
+                }
+                //linear-gradient 속성값이해
+                .gradient-box {
+                    width: 500px;
+                    height: 500px;
+                    background: linear-gradient(90deg, #fff 50%, #555 50%) 100% 0 / 200% 100%;
+                    /* 
+                    100% 0 _ x축 y축 그라디언트의 위치값
+                    / 200% 100% _ 그라디언트의 크기 x축으로 2배 늘린 것
+                    */
                 }
             }
         }
