@@ -1386,3 +1386,19 @@ gsap.timeline({
 .to(`${recruitTitle} .card-wrapper`, {rotate: 15})
 .to(`${recruitTitle} h2 p:nth-child(1)`, {opacity: 1}, "<") //"<"를 넣으면 이전 동작과 동시 실행이 가능하다
 .to(`${recruitTitle} h2 p:nth-child(2)`, {opacity: 1})
+
+
+
+
+
+
+
+
+
+
+/* 메인 footer */
+//footer 고정
+ScrollTrigger.create({
+    tirgger: '.footer',
+    pin: '.footer .footer-wrap',
+})

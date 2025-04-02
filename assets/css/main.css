@@ -1176,7 +1176,10 @@ section.work .sticky-wrap .title-wrap p {
   letter-spacing: -0.02em;
 }
 section.recruit {
+  position: relative;
+  z-index: 1;
   padding: 30rem 0 35rem;
+  background-color: #000;
 }
 section.recruit .recruit-wrap {
   width: 100%;
@@ -1284,4 +1287,73 @@ section.recruit .recruit-wrap .list-wrap .gradient-box {
   100% 0 _ x축 y축 그라디언트의 위치값
   / 200% 100% _ 그라디언트의 크기 x축으로 2배 늘린 것
   */
+}
+
+footer {
+  width: 100%;
+  height: 197vh;
+  overflow: hidden;
+  margin-top: -100vh;
+}
+footer .footer-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+footer .footer-wrap .bg-video {
+  width: 100%;
+  height: 100%;
+}
+footer .footer-wrap .bg-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .footer-wrap .text-wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+footer .footer-wrap .text-wrap p {
+  position: absolute;
+  text-align: center;
+}
+footer .footer-wrap .text-wrap .text {
+  top: 37%;
+  width: 100%;
+  font-family: "Selecta-Light";
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.02em;
+}
+footer .footer-wrap .text-wrap .text-header {
+  bottom: 11rem;
+  width: 100%;
+  font-family: "Selecta-Medium";
+  font-size: 18rem;
+  line-height: 19rem;
+  letter-spacing: -0.01em;
+}
+footer .footer-wrap .text-wrap .text-bottom {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-wrap .text-wrap .text-bottom span, footer .footer-wrap .text-wrap .text-bottom a {
+  font-family: "Selecta-Light";
+  font-size: 2rem;
+  line-height: 2rem;
+}
+footer .footer-wrap .text-wrap .text-bottom span:first-child {
+  padding-left: 4rem;
+}
+footer .footer-wrap .text-wrap .text-bottom span:last-child {
+  padding-right: 4rem;
+}
+footer .footer-wrap .text-wrap .text-bottom a {
+  color: #0f0;
 }
