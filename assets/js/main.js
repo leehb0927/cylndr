@@ -934,22 +934,32 @@ const area12ScrollTween = gsap.to('.about-us .horizontal-area-wrap .area12', {
 
 //area12스크롤 맞춰 움직이는 canvas랜더
 const setupCanvasAnimation = ({ 
-    canvasSelector, // 캔버스 선택자 
-    imagePath,      // 이미지 경로 
-    totalFrames,    // 이미지 개수 
-    loopCount,      // 몇 바퀴 돌릴지 
-    scrollTrigger   // 스크롤 트리거 설정
+    canvasSelector,
+    imagePath,
+    totalFrames,
+    loopCount,
+    scrollTrigger
 }) => {
     const canvas = document.querySelector(canvasSelector);
     const ctx = canvas.getContext('2d');
+    const images = [];
+
+    // 이미지 프리로드
+    for (let i = 0; i < totalFrames; i++) {
+        const img = new Image();
+        img.src = `${imagePath}/${i}.png`;
+        images.push(img);
+    }
 
     const renderImage = (index = 0) => {
-        const img = new Image();
-        img.onload = function () {
+        const img = images[index];
+        if (img && img.complete) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(img, 0, 0);
-        };
-        img.src = `${imagePath}/${index}.png`;
+        } else {
+            // 이미지 아직 안 로드됐으면 로드 완료 후 다시 시도
+            img.onload = () => renderImage(index);
+        }
     };
 
     gsap.timeline({
@@ -968,6 +978,7 @@ const setupCanvasAnimation = ({
         }
     });
 };
+
 
 const scrollTriggerConfig = {
     trigger: '.about-us .horizontal-area-wrap .area12',
