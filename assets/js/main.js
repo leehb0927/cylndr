@@ -406,6 +406,51 @@ gsap.to('.main .about-us .area5 .bg-image', {
     }
 });
 
+//현재시간 나타내기
+const area5Date = document.querySelector('.main .area5 .box-text .date');
+
+function getDaySuffix(day) {
+    if (day >= 11 && day <= 13) return 'TH';
+    const lastDigit = day % 10;
+    if (lastDigit === 1) return 'ST';
+    if (lastDigit === 2) return 'ND';
+    if (lastDigit === 3) return 'RD';
+    return 'TH';
+}
+
+function updateDate() {
+    const now = new Date();
+    const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    const month = months[now.getMonth()];
+    const day = now.getDate();
+    const suffix = getDaySuffix(day);
+    const year = now.getFullYear();
+
+    area5Date.textContent = `${month} ${day}${suffix}. ${year}`;
+}
+
+updateDate();
+
+
+const area5CurrnetTime = document.querySelector('.main .area5 .box-text .time');
+const area5Hour = area5CurrnetTime.querySelector('.hour');
+const area5Minute = area5CurrnetTime.querySelector('.minute');
+const area5Second = area5CurrnetTime.querySelector('.second');
+
+function currentUpdateTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    area5Hour.textContent = `${hours}`;
+    area5Minute.textContent = `${minutes}`;
+    area5Second.textContent = `${seconds}`;
+}
+
+currentUpdateTime()
+setInterval(currentUpdateTime, 1000);
+
 
 
 
