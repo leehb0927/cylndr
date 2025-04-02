@@ -1,3 +1,28 @@
+/* 이미지 프리로드 */
+//area14 이미지 프리로드
+const area14ImageCount = 43;
+const area14ImageCache = [];
+
+for (let i = 1; i <= area14ImageCount; i++) {
+    const area14Img = new Image();
+    area14Img.src = `./assets/image/area14/area14_${i}.jpg`;
+    area14ImageCache.push(area14Img); // 여기를 고침
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 스크롤 부드럽게 */
 /* const lenis = new Lenis()
 
